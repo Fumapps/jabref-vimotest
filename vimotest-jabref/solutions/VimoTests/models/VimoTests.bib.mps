@@ -31,7 +31,7 @@
       <property role="SIh3z" value="Article" />
       <property role="SIh3I" value="MyArticle" />
       <node concept="ge_5U" id="1nonshGpjfB" role="geqzs">
-        <property role="TrG5h" value="Title" />
+        <property role="TrG5h" value="title" />
         <property role="ge_5W" value="&quot;The Article&quot;" />
       </node>
     </node>
@@ -39,7 +39,7 @@
       <property role="SIh3z" value="Book" />
       <property role="SIh3I" value="MyBook" />
       <node concept="ge_5U" id="1nonshGpjfC" role="geqzs">
-        <property role="TrG5h" value="Title" />
+        <property role="TrG5h" value="title" />
         <property role="ge_5W" value="&quot;The Book&quot;" />
       </node>
     </node>
