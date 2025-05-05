@@ -184,6 +184,9 @@
           <node concept="la8eA" id="7UfgHTDO0aL" role="lcghm">
             <property role="lacIc" value="=" />
           </node>
+          <node concept="la8eA" id="7UfgHTDOIQA" role="lcghm">
+            <property role="lacIc" value="{" />
+          </node>
           <node concept="l9hG8" id="7UfgHTDO0cF" role="lcghm">
             <node concept="2OqwBi" id="7UfgHTDO0HB" role="lb14g">
               <node concept="117lpO" id="7UfgHTDO0d$" role="2Oq$k0" />
@@ -191,6 +194,9 @@
                 <ref role="3TsBF5" to="8uzg:5LfH3_ctul5" resolve="value" />
               </node>
             </node>
+          </node>
+          <node concept="la8eA" id="7UfgHTDOIVu" role="lcghm">
+            <property role="lacIc" value="}" />
           </node>
         </node>
         <node concept="3clFbJ" id="7UfgHTDO0Pi" role="3cqZAp">
@@ -208,6 +214,40 @@
         </node>
         <node concept="lc7rE" id="7UfgHTDO186" role="3cqZAp">
           <node concept="l8MVK" id="7UfgHTDO19s" role="lcghm" />
+        </node>
+      </node>
+    </node>
+  </node>
+  <node concept="WtQ9Q" id="7UfgHTDOKtp">
+    <ref role="WuzLi" to="8uzg:7UfgHTDOxyw" resolve="EmptyBibContent" />
+    <node concept="11bSqf" id="7UfgHTDOKtq" role="11c4hB">
+      <node concept="3clFbS" id="7UfgHTDOKtr" role="2VODD2">
+        <node concept="lc7rE" id="7UfgHTDOKKw" role="3cqZAp">
+          <node concept="l8MVK" id="7UfgHTDOKL2" role="lcghm" />
+        </node>
+      </node>
+    </node>
+  </node>
+  <node concept="WtQ9Q" id="7UfgHTDOKLs">
+    <ref role="WuzLi" to="8uzg:7UfgHTDO6FD" resolve="BibComment" />
+    <node concept="11bSqf" id="7UfgHTDOKLt" role="11c4hB">
+      <node concept="3clFbS" id="7UfgHTDOKLu" role="2VODD2">
+        <node concept="lc7rE" id="7UfgHTDOKLR" role="3cqZAp">
+          <node concept="la8eA" id="7UfgHTDOKMZ" role="lcghm">
+            <property role="lacIc" value="@Comment{" />
+          </node>
+          <node concept="l9hG8" id="7UfgHTDOKOc" role="lcghm">
+            <node concept="2OqwBi" id="7UfgHTDOKVA" role="lb14g">
+              <node concept="117lpO" id="7UfgHTDOKOH" role="2Oq$k0" />
+              <node concept="3TrcHB" id="7UfgHTDOL4H" role="2OqNvi">
+                <ref role="3TsBF5" to="8uzg:7UfgHTDO6FE" resolve="value" />
+              </node>
+            </node>
+          </node>
+          <node concept="la8eA" id="7UfgHTDOL8e" role="lcghm">
+            <property role="lacIc" value="}" />
+          </node>
+          <node concept="l8MVK" id="7UfgHTDOLa8" role="lcghm" />
         </node>
       </node>
     </node>

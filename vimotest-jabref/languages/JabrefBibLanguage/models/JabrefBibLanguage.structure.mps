@@ -62,7 +62,7 @@
   <node concept="1TIwiD" id="UU9dkQ0NgP">
     <property role="EcuMT" value="1061201160351986741" />
     <property role="TrG5h" value="BibEntry" />
-    <property role="34LRSv" value="entry" />
+    <property role="34LRSv" value="@Entry" />
     <ref role="1TJDcQ" to="tpck:gw2VY9q" />
     <node concept="1TJgyi" id="UU9dkQ0NgQ" role="1TKVEl">
       <property role="IQ2nx" value="1061201160351986742" />
@@ -103,6 +103,28 @@
       <property role="IQ2nx" value="6651733332838442309" />
       <property role="TrG5h" value="value" />
       <ref role="AX2Wp" to="tpck:fKAOsGN" resolve="string" />
+    </node>
+  </node>
+  <node concept="1TIwiD" id="7UfgHTDO6FD">
+    <property role="EcuMT" value="9119581293473983209" />
+    <property role="TrG5h" value="BibComment" />
+    <property role="34LRSv" value="@Comment" />
+    <ref role="1TJDcQ" to="tpck:gw2VY9q" />
+    <node concept="1TJgyi" id="7UfgHTDO6FE" role="1TKVEl">
+      <property role="IQ2nx" value="9119581293473983210" />
+      <property role="TrG5h" value="value" />
+      <ref role="AX2Wp" to="tpck:fKAOsGN" resolve="string" />
+    </node>
+    <node concept="PrWs8" id="7UfgHTDOvK6" role="PzmwI">
+      <ref role="PrY4T" node="UU9dkQ0NgS" resolve="IBibFileContent" />
+    </node>
+  </node>
+  <node concept="1TIwiD" id="7UfgHTDOxyw">
+    <property role="EcuMT" value="9119581293474093216" />
+    <property role="TrG5h" value="EmptyBibContent" />
+    <ref role="1TJDcQ" to="tpck:gw2VY9q" />
+    <node concept="PrWs8" id="7UfgHTDOxyx" role="PzmwI">
+      <ref role="PrY4T" node="UU9dkQ0NgS" resolve="IBibFileContent" />
     </node>
   </node>
 </model>
