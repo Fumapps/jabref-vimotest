@@ -284,7 +284,9 @@
       </node>
       <node concept="3F0ifn" id="5LfH3_ctxNu" role="3EZMnx">
         <property role="3F0ifm" value="{" />
-        <ref role="1k5W1q" to="tpen:hXb$RYA" resolve="LeftBracket" />
+        <node concept="3mYdg7" id="7cLZN6csOvh" role="3F10Kt">
+          <property role="1413C4" value="bracket" />
+        </node>
       </node>
       <node concept="3F0A7n" id="5LfH3_ctxNK" role="3EZMnx">
         <ref role="1NtTu8" to="8uzg:UU9dkQ0NgV" resolve="key" />
@@ -304,9 +306,11 @@
       </node>
       <node concept="3F0ifn" id="5LfH3_ctxNx" role="3EZMnx">
         <property role="3F0ifm" value="}" />
-        <ref role="1k5W1q" to="tpen:hXb$V4T" resolve="RightBracket" />
         <node concept="pVoyu" id="5LfH3_ctxNz" role="3F10Kt">
           <property role="VOm3f" value="true" />
+        </node>
+        <node concept="3mYdg7" id="7cLZN6csOvi" role="3F10Kt">
+          <property role="1413C4" value="bracket" />
         </node>
       </node>
       <node concept="l2Vlx" id="5LfH3_ctulz" role="2iSdaV" />
