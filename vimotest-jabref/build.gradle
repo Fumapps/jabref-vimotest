@@ -3,6 +3,7 @@ ext.mpsPlugins = [ ]
 ext.customMpsPlugins = [ "vimotest-plugins-all": "https://github.com/vimotest/mps-vimotest/releases/download/2024.3.0/vimotest-plugins-all.zip" ]
 
 apply from: 'gradle/init-gradle-scripts.gradle'
+apply from: 'gradle/extract-icons.gradle'
 
 task prepareMps {
     group 'mps'

@@ -1,0 +1,97 @@
+repositories {
+    mavenCentral()
+    maven { url "https://oss.sonatype.org/content/repositories/snapshots" }
+}
+
+configurations {
+    iconExtractor
+}
+
+dependencies {
+    iconExtractor 'org.kordamp.ikonli:ikonli-core:12.3.1'
+    iconExtractor 'org.kordamp.ikonli:ikonli-materialdesign2-pack:12.3.1'
+    iconExtractor 'org.kordamp.ikonli:ikonli-swing:12.3.1'
+}
+
+// Icons deklarativ definieren
+def materialIcons = [
+        RANKING: ["STAR"],
+        RANK1: ["STAR", "STAR_OUTLINE", "STAR_OUTLINE", "STAR_OUTLINE", "STAR_OUTLINE"],
+        RANK2: ["STAR", "STAR", "STAR_OUTLINE", "STAR_OUTLINE", "STAR_OUTLINE"],
+        RANK3: ["STAR", "STAR", "STAR", "STAR_OUTLINE", "STAR_OUTLINE"],
+        RANK4: ["STAR", "STAR", "STAR", "STAR", "STAR_OUTLINE"],
+        RANK5: ["STAR", "STAR", "STAR", "STAR", "STAR"],
+        PRIORITY: ["FLAG"],
+        PRIORITY_HIGH: ["Color.RED", "FLAG"],
+        PRIORITY_MEDIUM: ["Color.ORANGE", "FLAG"],
+        PRIORITY_LOW: ["#6FCC75", "FLAG"],
+]
+
+task extractIcons { // Changed from 'type: JavaExec'
+    group = 'icons'
+    description = 'Erstellt separate PNGs für jeden Eintrag in materialIcons via IconExtractor.java.'
+
+    // Define the output directory for icons.
+    // Defaulting to 'icons' in the project root.
+    // You can override this by passing a project property: -PiconOutputDir=src/main/resources/icons_generated
+    def outputIconDir = project.file(project.hasProperty('iconOutputDir') ? project.property('iconOutputDir').toString() : 'icons')
+
+    doFirst {
+        // --- Compilation of IconExtractor.java ---
+        def iconExtractorSourceFile = file("$projectDir/gradle/IconExtractor.java") // Assumed location of your Java source
+        def tempBuildDir = file("$buildDir/tmp/iconExtractor") // Temp dir for compilation
+        def compiledIconExtractorClassesDir = tempBuildDir // .class files will go here
+
+        if (!iconExtractorSourceFile.exists()) {
+            throw new FileNotFoundException("IconExtractor.java not found at ${iconExtractorSourceFile}. Please ensure it exists.")
+        }
+
+        tempBuildDir.mkdirs()
+        def copiedJavaFile = file("$tempBuildDir/IconExtractor.java")
+        copiedJavaFile.text = iconExtractorSourceFile.text // Copy source to temp dir
+
+        // Compile IconExtractor.java using ant.javac
+        ant.javac(
+                srcdir: tempBuildDir, // Directory containing the copied IconExtractor.java
+                destdir: compiledIconExtractorClassesDir, // Output directory for .class file
+                classpath: configurations.iconExtractor.asPath,
+                includeantruntime: false, // Recommended for repeatable builds
+                source: '17',  // Specify your Java source compatibility (e.g., 11, 17)
+                target: '17'   // Specify your Java target compatibility
+                // Ensure these versions are compatible with the Java features used (like .toList())
+        )
+        println "INFO: IconExtractor.java compiled successfully."
+    }
+
+    doLast {
+        // --- Execution of IconExtractor for each icon set ---
+        outputIconDir.mkdirs() // Ensure the final output directory exists
+        println "INFO: Generating icons in directory: ${outputIconDir.absolutePath}"
+
+        // Directory where IconExtractor.class was compiled
+        def compiledIconExtractorClassesDir = file("$buildDir/tmp/iconExtractor")
+
+        materialIcons.each { String iconKey, List<String> iconNameList ->
+            // Prepare arguments for the IconExtractor: <outDir> <baseName> <ICON_ENUM_NAME> [weitere Icons...]
+            def currentArgs = [outputIconDir.absolutePath, iconKey] + iconNameList
+
+            project.javaexec {
+                classpath = configurations.iconExtractor + files(compiledIconExtractorClassesDir) // Include dependencies and compiled class
+                mainClass = 'IconExtractor' // Use mainClass for project.javaexec
+                args = currentArgs
+                // standardOutput = System.out // Uncomment for debugging output from IconExtractor
+                // errorOutput = System.err    // Uncomment for debugging error output from IconExtractor
+            }
+            println "INFO: Generated ${outputIconDir.absolutePath}/${iconKey}.png (icons: ${iconNameList.join(', ')})"
+        }
+        println "INFO: All icons generated successfully."
+    }
+}
+
+// Optional: Add the icon output directory and temp compilation dir to the clean task
+/*tasks.named("clean", Clean) {
+    delete outputIconDir
+
+    delete project.file('icons')
+    delete "$buildDir/tmp/iconExtractor"
+}*/
