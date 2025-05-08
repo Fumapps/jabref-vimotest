@@ -23,3 +23,5 @@ plugins {
 }
 
 rootProject.name = "JabRef"
+
+include("vimotest-jabref")
