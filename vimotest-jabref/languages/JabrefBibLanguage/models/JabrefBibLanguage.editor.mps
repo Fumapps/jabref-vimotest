@@ -57,6 +57,7 @@
       <concept id="1186414536763" name="jetbrains.mps.lang.editor.structure.BooleanStyleSheetItem" flags="ln" index="VOi$J">
         <property id="1186414551515" name="flag" index="VOm3f" />
       </concept>
+      <concept id="1186414976055" name="jetbrains.mps.lang.editor.structure.DrawBorderStyleClassItem" flags="ln" index="VPXOz" />
       <concept id="1630016958697344083" name="jetbrains.mps.lang.editor.structure.IMenu_Concept" flags="ngI" index="2ZABuq">
         <reference id="6591946374543067572" name="conceptDeclaration" index="aqKnT" />
         <child id="5991739802479788259" name="type" index="22hAXT" />
@@ -93,6 +94,7 @@
       <concept id="1219418625346" name="jetbrains.mps.lang.editor.structure.IStyleContainer" flags="ngI" index="3F0Thp">
         <child id="1219418656006" name="styleItem" index="3F10Kt" />
       </concept>
+      <concept id="1073389882823" name="jetbrains.mps.lang.editor.structure.CellModel_RefNode" flags="sg" stub="730538219795960754" index="3F1sOY" />
       <concept id="1073390211982" name="jetbrains.mps.lang.editor.structure.CellModel_RefNodeList" flags="sg" stub="2794558372793454595" index="3F2HdR" />
       <concept id="1166049232041" name="jetbrains.mps.lang.editor.structure.AbstractComponent" flags="ng" index="1XWOmA">
         <reference id="1166049300910" name="conceptDeclaration" index="1XX52x" />
@@ -199,6 +201,9 @@
       </concept>
     </language>
     <language id="ceab5195-25ea-4f22-9b92-103b95ca8c0c" name="jetbrains.mps.lang.core">
+      <concept id="1133920641626" name="jetbrains.mps.lang.core.structure.BaseConcept" flags="ng" index="2VYdi">
+        <property id="1193676396447" name="virtualPackage" index="3GE5qa" />
+      </concept>
       <concept id="1169194658468" name="jetbrains.mps.lang.core.structure.INamedConcept" flags="ngI" index="TrEIO">
         <property id="1169194664001" name="name" index="TrG5h" />
       </concept>
@@ -236,6 +241,7 @@
     </language>
   </registry>
   <node concept="24kQdi" id="5LfH3_ctul8">
+    <property role="3GE5qa" value="bib" />
     <ref role="1XX52x" to="8uzg:5LfH3_ctul3" resolve="BibEntryField" />
     <node concept="3EZMnI" id="5LfH3_ctula" role="2wV5jI">
       <node concept="3F0A7n" id="5LfH3_ctuln" role="3EZMnx">
@@ -255,6 +261,7 @@
     </node>
   </node>
   <node concept="24kQdi" id="5LfH3_ctulp">
+    <property role="3GE5qa" value="bib" />
     <ref role="1XX52x" to="8uzg:UU9dkQ0NgP" resolve="BibEntry" />
     <node concept="3EZMnI" id="5LfH3_ctulw" role="2wV5jI">
       <node concept="3F0ifn" id="5LfH3_ctulC" role="3EZMnx">
@@ -317,6 +324,7 @@
     </node>
   </node>
   <node concept="24kQdi" id="1nonshGoC3a">
+    <property role="3GE5qa" value="bib" />
     <ref role="1XX52x" to="8uzg:UU9dkQ0NgO" resolve="BibFile" />
     <node concept="3EZMnI" id="1nonshGoC3c" role="2wV5jI">
       <node concept="3F0ifn" id="1nonshGoC3g" role="3EZMnx">
@@ -416,6 +424,7 @@
     <node concept="3Tm1VV" id="1nonshGp0$S" role="1B3o_S" />
   </node>
   <node concept="22mcaB" id="1nonshGpkrh">
+    <property role="3GE5qa" value="bib" />
     <ref role="aqKnT" to="8uzg:5LfH3_ctul3" resolve="BibEntryField" />
     <node concept="22hDWj" id="1nonshGpkri" role="22hAXT" />
     <node concept="2F$Pav" id="1nonshGpkrj" role="3ft7WO">
@@ -576,6 +585,7 @@
     </node>
   </node>
   <node concept="24kQdi" id="7UfgHTDO6FF">
+    <property role="3GE5qa" value="bib" />
     <ref role="1XX52x" to="8uzg:7UfgHTDO6FD" resolve="BibComment" />
     <node concept="3EZMnI" id="7UfgHTDO6FJ" role="2wV5jI">
       <node concept="2iRfu4" id="7UfgHTDO6FK" role="2iSdaV" />
@@ -607,12 +617,30 @@
     </node>
   </node>
   <node concept="24kQdi" id="7UfgHTDOxyy">
+    <property role="3GE5qa" value="bib" />
     <ref role="1XX52x" to="8uzg:7UfgHTDOxyw" resolve="EmptyBibContent" />
     <node concept="3F0ifn" id="7UfgHTDOxy$" role="2wV5jI" />
   </node>
   <node concept="22mcaB" id="7UfgHTDOxyA">
+    <property role="3GE5qa" value="bib" />
     <ref role="aqKnT" to="8uzg:7UfgHTDOxyw" resolve="EmptyBibContent" />
     <node concept="22hDWj" id="7UfgHTDOxyB" role="22hAXT" />
+  </node>
+  <node concept="24kQdi" id="6xCODJVrCn4">
+    <property role="3GE5qa" value="vimotest" />
+    <ref role="1XX52x" to="8uzg:6xCODJVqSLo" resolve="BibFileTestContext" />
+    <node concept="3EZMnI" id="6xCODJVrCn6" role="2wV5jI">
+      <node concept="3F0A7n" id="6xCODJVrCna" role="3EZMnx">
+        <ref role="1NtTu8" to="tpck:h0TrG11" resolve="name" />
+      </node>
+      <node concept="3F1sOY" id="6xCODJVrCnd" role="3EZMnx">
+        <ref role="1NtTu8" to="8uzg:6xCODJVrCn3" resolve="bib" />
+        <node concept="VPXOz" id="6xCODJVrCnf" role="3F10Kt">
+          <property role="VOm3f" value="true" />
+        </node>
+      </node>
+      <node concept="2iRfu4" id="6xCODJVrCn9" role="2iSdaV" />
+    </node>
   </node>
 </model>
 

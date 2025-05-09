@@ -2,9 +2,11 @@
 <model ref="r:61f9be7b-adb1-479e-b314-00ecbefb86d5(JabrefBibLanguage.structure)">
   <persistence version="9" />
   <languages>
+    <use id="716e8717-88c0-4280-8c16-b4d88567596f" name="de.vimotest.viewmodel.testing" version="1" />
     <devkit ref="78434eb8-b0e5-444b-850d-e7c4ad2da9ab(jetbrains.mps.devkit.aspect.structure)" />
   </languages>
   <imports>
+    <import index="53m0" ref="r:b38f4eba-3263-43b3-b5a0-ad906d4f1a11(de.vimotest.viewmodel.testing.structure)" />
     <import index="tpck" ref="r:00000000-0000-4000-0000-011c89590288(jetbrains.mps.lang.core.structure)" implicit="true" />
   </imports>
   <registry>
@@ -37,6 +39,9 @@
       </concept>
     </language>
     <language id="ceab5195-25ea-4f22-9b92-103b95ca8c0c" name="jetbrains.mps.lang.core">
+      <concept id="1133920641626" name="jetbrains.mps.lang.core.structure.BaseConcept" flags="ng" index="2VYdi">
+        <property id="1193676396447" name="virtualPackage" index="3GE5qa" />
+      </concept>
       <concept id="1169194658468" name="jetbrains.mps.lang.core.structure.INamedConcept" flags="ngI" index="TrEIO">
         <property id="1169194664001" name="name" index="TrG5h" />
       </concept>
@@ -47,6 +52,7 @@
     <property role="TrG5h" value="BibFile" />
     <property role="19KtqR" value="true" />
     <property role="34LRSv" value="bib" />
+    <property role="3GE5qa" value="bib" />
     <ref role="1TJDcQ" to="tpck:gw2VY9q" />
     <node concept="1TJgyj" id="UU9dkQ0NgR" role="1TKVEi">
       <property role="IQ2ns" value="1061201160351986743" />
@@ -63,6 +69,7 @@
     <property role="EcuMT" value="1061201160351986741" />
     <property role="TrG5h" value="BibEntry" />
     <property role="34LRSv" value="@Entry" />
+    <property role="3GE5qa" value="bib" />
     <ref role="1TJDcQ" to="tpck:gw2VY9q" />
     <node concept="1TJgyi" id="UU9dkQ0NgQ" role="1TKVEl">
       <property role="IQ2nx" value="1061201160351986742" />
@@ -91,10 +98,12 @@
   <node concept="PlHQZ" id="UU9dkQ0NgS">
     <property role="EcuMT" value="1061201160351986744" />
     <property role="TrG5h" value="IBibFileContent" />
+    <property role="3GE5qa" value="bib" />
   </node>
   <node concept="1TIwiD" id="5LfH3_ctul3">
     <property role="EcuMT" value="6651733332838442307" />
     <property role="TrG5h" value="BibEntryField" />
+    <property role="3GE5qa" value="bib" />
     <ref role="1TJDcQ" to="tpck:gw2VY9q" />
     <node concept="PrWs8" id="5LfH3_ctul4" role="PzmwI">
       <ref role="PrY4T" to="tpck:h0TrEE$" resolve="INamedConcept" />
@@ -109,6 +118,7 @@
     <property role="EcuMT" value="9119581293473983209" />
     <property role="TrG5h" value="BibComment" />
     <property role="34LRSv" value="@Comment" />
+    <property role="3GE5qa" value="bib" />
     <ref role="1TJDcQ" to="tpck:gw2VY9q" />
     <node concept="1TJgyi" id="7UfgHTDO6FE" role="1TKVEl">
       <property role="IQ2nx" value="9119581293473983210" />
@@ -122,9 +132,26 @@
   <node concept="1TIwiD" id="7UfgHTDOxyw">
     <property role="EcuMT" value="9119581293474093216" />
     <property role="TrG5h" value="EmptyBibContent" />
+    <property role="3GE5qa" value="bib" />
     <ref role="1TJDcQ" to="tpck:gw2VY9q" />
     <node concept="PrWs8" id="7UfgHTDOxyx" role="PzmwI">
       <ref role="PrY4T" node="UU9dkQ0NgS" resolve="IBibFileContent" />
+    </node>
+  </node>
+  <node concept="1TIwiD" id="6xCODJVqSLo">
+    <property role="EcuMT" value="7523494744902306904" />
+    <property role="TrG5h" value="BibFileTestContext" />
+    <property role="34LRSv" value="bib" />
+    <property role="3GE5qa" value="vimotest" />
+    <ref role="1TJDcQ" to="tpck:gw2VY9q" />
+    <node concept="PrWs8" id="6xCODJVqSLA" role="PzmwI">
+      <ref role="PrY4T" to="53m0:2Yd1qrJOMZM" resolve="ITestScenarioContext" />
+    </node>
+    <node concept="1TJgyj" id="6xCODJVrCn3" role="1TKVEi">
+      <property role="IQ2ns" value="7523494744902501827" />
+      <property role="20lmBu" value="fLJjDmT/aggregation" />
+      <property role="20kJfa" value="bib" />
+      <ref role="20lvS9" node="UU9dkQ0NgO" resolve="BibFile" />
     </node>
   </node>
 </model>

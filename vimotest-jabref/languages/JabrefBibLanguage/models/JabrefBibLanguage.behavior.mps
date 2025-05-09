@@ -46,8 +46,14 @@
         <reference id="1138056395725" name="property" index="3TsBF5" />
       </concept>
     </language>
+    <language id="ceab5195-25ea-4f22-9b92-103b95ca8c0c" name="jetbrains.mps.lang.core">
+      <concept id="1133920641626" name="jetbrains.mps.lang.core.structure.BaseConcept" flags="ng" index="2VYdi">
+        <property id="1193676396447" name="virtualPackage" index="3GE5qa" />
+      </concept>
+    </language>
   </registry>
   <node concept="13h7C7" id="7UfgHTDOtDx">
+    <property role="3GE5qa" value="bib" />
     <ref role="13h7C2" to="8uzg:7UfgHTDO6FD" resolve="BibComment" />
     <node concept="13hLZK" id="7UfgHTDOtDy" role="13h7CW">
       <node concept="3clFbS" id="7UfgHTDOtDz" role="2VODD2">

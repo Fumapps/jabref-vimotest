@@ -15,6 +15,9 @@ dependencies {
 
 // Icons deklarativ definieren
 def materialIcons = [
+        READ_STATUS_READ: ["#6FCC75", "EYE"],
+        READ_STATUS_SKIMMED: ["Color.ORANGE", "EYE"],
+        READ_STATUS: ["EYE"],
         RANKING: ["STAR"],
         RANK1: ["STAR", "STAR_OUTLINE", "STAR_OUTLINE", "STAR_OUTLINE", "STAR_OUTLINE"],
         RANK2: ["STAR", "STAR", "STAR_OUTLINE", "STAR_OUTLINE", "STAR_OUTLINE"],

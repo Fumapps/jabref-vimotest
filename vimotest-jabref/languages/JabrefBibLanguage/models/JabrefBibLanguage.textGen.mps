@@ -67,11 +67,17 @@
         <reference id="1138056546658" name="link" index="3TtcxE" />
       </concept>
     </language>
+    <language id="ceab5195-25ea-4f22-9b92-103b95ca8c0c" name="jetbrains.mps.lang.core">
+      <concept id="1133920641626" name="jetbrains.mps.lang.core.structure.BaseConcept" flags="ng" index="2VYdi">
+        <property id="1193676396447" name="virtualPackage" index="3GE5qa" />
+      </concept>
+    </language>
     <language id="83888646-71ce-4f1c-9c53-c54016f6ad4f" name="jetbrains.mps.baseLanguage.collections">
       <concept id="1176501494711" name="jetbrains.mps.baseLanguage.collections.structure.IsNotEmptyOperation" flags="nn" index="3GX2aA" />
     </language>
   </registry>
   <node concept="WtQ9Q" id="7UfgHTDNBZC">
+    <property role="3GE5qa" value="bib" />
     <ref role="WuzLi" to="8uzg:UU9dkQ0NgO" resolve="BibFile" />
     <node concept="9MYSb" id="7UfgHTDNBZD" role="33IsuW">
       <node concept="3clFbS" id="7UfgHTDNBZE" role="2VODD2">
@@ -98,6 +104,7 @@
     </node>
   </node>
   <node concept="WtQ9Q" id="7UfgHTDNU0O">
+    <property role="3GE5qa" value="bib" />
     <ref role="WuzLi" to="8uzg:UU9dkQ0NgP" resolve="BibEntry" />
     <node concept="11bSqf" id="7UfgHTDNU0P" role="11c4hB">
       <node concept="3clFbS" id="7UfgHTDNU0Q" role="2VODD2">
@@ -168,6 +175,7 @@
     </node>
   </node>
   <node concept="WtQ9Q" id="7UfgHTDNZNZ">
+    <property role="3GE5qa" value="bib" />
     <ref role="WuzLi" to="8uzg:5LfH3_ctul3" resolve="BibEntryField" />
     <node concept="11bSqf" id="7UfgHTDNZO0" role="11c4hB">
       <node concept="3clFbS" id="7UfgHTDNZO1" role="2VODD2">
@@ -219,6 +227,7 @@
     </node>
   </node>
   <node concept="WtQ9Q" id="7UfgHTDOKtp">
+    <property role="3GE5qa" value="bib" />
     <ref role="WuzLi" to="8uzg:7UfgHTDOxyw" resolve="EmptyBibContent" />
     <node concept="11bSqf" id="7UfgHTDOKtq" role="11c4hB">
       <node concept="3clFbS" id="7UfgHTDOKtr" role="2VODD2">
@@ -229,6 +238,7 @@
     </node>
   </node>
   <node concept="WtQ9Q" id="7UfgHTDOKLs">
+    <property role="3GE5qa" value="bib" />
     <ref role="WuzLi" to="8uzg:7UfgHTDO6FD" resolve="BibComment" />
     <node concept="11bSqf" id="7UfgHTDOKLt" role="11c4hB">
       <node concept="3clFbS" id="7UfgHTDOKLu" role="2VODD2">

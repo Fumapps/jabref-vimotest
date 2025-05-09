@@ -58,8 +58,14 @@
         <reference id="1138056395725" name="property" index="3TsBF5" />
       </concept>
     </language>
+    <language id="ceab5195-25ea-4f22-9b92-103b95ca8c0c" name="jetbrains.mps.lang.core">
+      <concept id="1133920641626" name="jetbrains.mps.lang.core.structure.BaseConcept" flags="ng" index="2VYdi">
+        <property id="1193676396447" name="virtualPackage" index="3GE5qa" />
+      </concept>
+    </language>
   </registry>
   <node concept="1M2fIO" id="UU9dkQ0NgW">
+    <property role="3GE5qa" value="bib" />
     <ref role="1M2myG" to="8uzg:UU9dkQ0NgP" resolve="BibEntry" />
     <node concept="EnEH3" id="UU9dkQ0NgX" role="1MhHOB">
       <ref role="EomxK" to="tpck:h0TrG11" resolve="name" />
