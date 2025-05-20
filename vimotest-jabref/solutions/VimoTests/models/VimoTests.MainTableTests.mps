@@ -8,12 +8,16 @@
   <imports />
   <registry>
     <language id="23ade25b-d490-4161-8365-ba6fd4e734ed" name="JabrefBibLanguage">
+      <concept id="6651733332838442307" name="JabrefBibLanguage.structure.BibEntryField" flags="ng" index="ge_5U">
+        <property id="6651733332838442309" name="value" index="ge_5W" />
+      </concept>
       <concept id="7523494744902306904" name="JabrefBibLanguage.structure.BibFileTestContext" flags="ng" index="2j0PV3">
         <child id="7523494744902501827" name="bib" index="2j1_to" />
       </concept>
       <concept id="1061201160351986741" name="JabrefBibLanguage.structure.BibEntry" flags="ng" index="SIh3w">
         <property id="1061201160351986742" name="type" index="SIh3z" />
         <property id="1061201160351986747" name="key" index="SIh3I" />
+        <child id="6651733332838456549" name="fields" index="geqzs" />
       </concept>
       <concept id="1061201160351986740" name="JabrefBibLanguage.structure.BibFile" flags="ng" index="SIh3x">
         <child id="1061201160351986743" name="contents" index="SIh3y" />
@@ -33,13 +37,28 @@
       <concept id="8948051009467167877" name="de.vimotest.viewmodel.testing.structure.ViewCommandInvocationAction" flags="ng" index="27s6xY">
         <reference id="8948051009467187564" name="targetCommand" index="27sXQn" />
       </concept>
+      <concept id="5447508759369797102" name="de.vimotest.viewmodel.testing.structure.WidgetTableRowsCheckValue" flags="ng" index="2ayrQO">
+        <child id="5447508759369822399" name="rows" index="2ay43_" />
+        <child id="7922086861434398932" name="columnCheckInfos" index="1EpG3j" />
+      </concept>
+      <concept id="3922717397912187313" name="de.vimotest.viewmodel.testing.structure.ImageSourceCheckValue" flags="ng" index="2mJbG1">
+        <child id="173640931447457367" name="expectedImage" index="3n32fm" />
+      </concept>
+      <concept id="3922717397912187253" name="de.vimotest.viewmodel.testing.structure.ImageCheck" flags="ng" index="2mJbJ5">
+        <child id="3922717397912187254" name="checks" index="2mJbJ6" />
+      </concept>
       <concept id="7445061853131767032" name="de.vimotest.viewmodel.testing.structure.ThenDescriptionWithAssert" flags="ng" index="DUd2R">
         <child id="7445061853131768388" name="assert" index="DUiSb" />
       </concept>
       <concept id="7445061853131767061" name="de.vimotest.viewmodel.testing.structure.WhenDescriptionWithAction" flags="ng" index="DUd5q">
         <child id="7445061853131768390" name="action" index="DUiS9" />
       </concept>
-      <concept id="6201744883139140374" name="de.vimotest.viewmodel.testing.structure.ButtonCheck" flags="ng" index="2X2XOa" />
+      <concept id="8882441622785832606" name="de.vimotest.viewmodel.testing.structure.LabelCheck" flags="ng" index="V3Zc6">
+        <child id="8882441622785832607" name="checks" index="V3Zc7" />
+      </concept>
+      <concept id="8882441622785832647" name="de.vimotest.viewmodel.testing.structure.TextCheckValue" flags="ng" index="V3Zdv">
+        <child id="5219625661136595408" name="expectedText" index="oSbKM" />
+      </concept>
       <concept id="3426401106044983339" name="de.vimotest.viewmodel.testing.structure.ViewModelFeatureTestSuite" flags="ng" index="30n1Qd">
         <reference id="3426401106044983489" name="targetViewModel" index="30n1PB" />
         <child id="3426401106044983341" name="tests" index="30n1Qb" />
@@ -52,6 +71,9 @@
         <child id="7199841511154487303" name="actionsWithDescription" index="1s$QAM" />
         <child id="7199841511154487304" name="assertsWithDescription" index="1s$QAX" />
       </concept>
+      <concept id="7922086861434398150" name="de.vimotest.viewmodel.testing.structure.ColumnCheckInfo" flags="ng" index="1EpGR1">
+        <reference id="7922086861434398929" name="columnDefinition" index="1EpG3m" />
+      </concept>
       <concept id="4309178210352018146" name="de.vimotest.viewmodel.testing.structure.GivenDescriptionWithContext" flags="ng" index="1IbZgy">
         <child id="7445061853131768373" name="context" index="DUiTU" />
       </concept>
@@ -59,16 +81,30 @@
         <child id="7445061853131767039" name="contextWithDescription" index="DUd2K" />
         <child id="7199841511154487307" name="whenThenDescriptions" index="1s$QAY" />
       </concept>
+      <concept id="1116055435858972130" name="de.vimotest.viewmodel.testing.structure.WidgetCellCheck" flags="ng" index="1NuoHz">
+        <reference id="216141720049061515" name="cachedWidgetToCheck" index="3elmOO" />
+        <child id="1116055435858972131" name="nestedCheck" index="1NuoHy" />
+      </concept>
+      <concept id="2392128244454465900" name="de.vimotest.viewmodel.testing.structure.TableCheckRow" flags="ng" index="3UOqEq">
+        <child id="5447508759369142120" name="cellChecks" index="2aBVWM" />
+      </concept>
+      <concept id="2392128244454154708" name="de.vimotest.viewmodel.testing.structure.TableViewCheck" flags="ng" index="3UVeCy">
+        <child id="2392128244454154709" name="checks" index="3UVeCz" />
+      </concept>
     </language>
     <language id="ce7915b5-36b4-4478-a67c-f5a8a72ed4a0" name="de.vimotest.viewmodel">
       <concept id="9155943921465570409" name="de.vimotest.viewmodel.structure.SelectedRowFeature" flags="ng" index="1i$ol" />
+      <concept id="3426927311333626895" name="de.vimotest.viewmodel.structure.ClosedImageSet" flags="ng" index="28FJ0O">
+        <child id="3426927311333626898" name="imageRefs" index="28FJ0D" />
+      </concept>
       <concept id="3922717397912187187" name="de.vimotest.viewmodel.structure.ImageWidget" flags="ng" index="2mJbI3">
         <child id="3922717397912187188" name="imageSourceFeature" index="2mJbI4" />
         <child id="3922717397912187189" name="enabledFeature" index="2mJbI5" />
         <child id="3922717397912187190" name="visibilityFeature" index="2mJbI6" />
       </concept>
       <concept id="3922717397912187178" name="de.vimotest.viewmodel.structure.ImageSourceFeature" flags="ng" index="2mJbIq">
-        <child id="173640931447457367" name="defaultImage" index="3n32fm" />
+        <reference id="173640931446787890" name="basedOnImageSet" index="3ncAEN" />
+        <child id="173640931447457367" name="defaultImage" index="3n32fn" />
       </concept>
       <concept id="5219625661134590255" name="de.vimotest.viewmodel.structure.SingleOrMultiLineString" flags="ng" index="o7Kjd">
         <property id="5219625661134591033" name="singleLineValue" index="o7K7r" />
@@ -110,6 +146,7 @@
         <reference id="2820520252859978187" name="image" index="3eDL7M" />
       </concept>
       <concept id="7497173622928201774" name="de.vimotest.viewmodel.structure.ImageDefinitionRegistry" flags="ng" index="1u6Luu">
+        <child id="3426927311333626907" name="closedSets" index="28FJ0w" />
         <child id="7497173622928201831" name="images" index="1u6Lvn" />
       </concept>
       <concept id="7497173622928201775" name="de.vimotest.viewmodel.structure.ImageDefinition" flags="ng" index="1u6Luv">
@@ -273,8 +310,9 @@
           <node concept="2mJbI3" id="3uaVgiEKLzj" role="Ek7rZ">
             <property role="TrG5h" value="Rank" />
             <node concept="2mJbIq" id="3uaVgiEKLzs" role="2mJbI4">
-              <node concept="3eDL7N" id="3uaVgiEKLz_" role="3n32fm">
-                <ref role="3eDL7M" node="3uaVgiEKLxP" resolve="RANKING" />
+              <ref role="3ncAEN" node="7LHyCtd50k3" resolve="Rank" />
+              <node concept="3eDL7N" id="3uaVgiEKLz_" role="3n32fn">
+                <ref role="3eDL7M" node="3uaVgiEKLxK" resolve="RANK1" />
               </node>
             </node>
             <node concept="C4FCh" id="3uaVgiEKLzI" role="2mJbI5" />
@@ -292,8 +330,9 @@
           <node concept="2mJbI3" id="3uaVgiEKLyA" role="Ek7rZ">
             <property role="TrG5h" value="ReadStatus" />
             <node concept="2mJbIq" id="3uaVgiEKLyJ" role="2mJbI4">
-              <node concept="3eDL7N" id="3uaVgiEKLyS" role="3n32fm">
-                <ref role="3eDL7M" node="3uaVgiEKLxQ" resolve="READ_STATUS" />
+              <ref role="3ncAEN" node="7LHyCtd50ka" resolve="ReadStatus" />
+              <node concept="3eDL7N" id="3uaVgiEKLyS" role="3n32fn">
+                <ref role="3eDL7M" node="3uaVgiEKLxR" resolve="READ_STATUS_READ" />
               </node>
             </node>
             <node concept="C4FCh" id="3uaVgiEKLz1" role="2mJbI5" />
@@ -311,8 +350,9 @@
           <node concept="2mJbI3" id="3uaVgiEKLxT" role="Ek7rZ">
             <property role="TrG5h" value="Priority" />
             <node concept="2mJbIq" id="3uaVgiEKLy2" role="2mJbI4">
-              <node concept="3eDL7N" id="3uaVgiEKLyb" role="3n32fm">
-                <ref role="3eDL7M" node="1_y16CGAXmP" resolve="PRIORITY" />
+              <ref role="3ncAEN" node="7LHyCtd50jW" resolve="Priority" />
+              <node concept="3eDL7N" id="3uaVgiEKLyb" role="3n32fn">
+                <ref role="3eDL7M" node="3uaVgiEKLxI" resolve="PRIORITY_MEDIUM" />
               </node>
             </node>
             <node concept="C4FCh" id="3uaVgiEKLyk" role="2mJbI5" />
@@ -335,6 +375,30 @@
             <node concept="SIh3w" id="6xCODJVrQo3" role="SIh3y">
               <property role="SIh3z" value="Article" />
               <property role="SIh3I" value="MyArticle" />
+              <node concept="ge_5U" id="7LHyCtd50jP" role="geqzs">
+                <property role="TrG5h" value="author" />
+                <property role="ge_5W" value="My Author" />
+              </node>
+              <node concept="ge_5U" id="7LHyCtd50jR" role="geqzs">
+                <property role="TrG5h" value="title" />
+                <property role="ge_5W" value="My Title" />
+              </node>
+              <node concept="ge_5U" id="7LHyCtd50jT" role="geqzs">
+                <property role="TrG5h" value="year" />
+                <property role="ge_5W" value="2025" />
+              </node>
+              <node concept="ge_5U" id="7LHyCtd50jV" role="geqzs">
+                <property role="TrG5h" value="rank" />
+                <property role="ge_5W" value="1" />
+              </node>
+              <node concept="ge_5U" id="7LHyCtd50kd" role="geqzs">
+                <property role="TrG5h" value="status" />
+                <property role="ge_5W" value="read" />
+              </node>
+              <node concept="ge_5U" id="7LHyCtd50ke" role="geqzs">
+                <property role="TrG5h" value="priority" />
+                <property role="ge_5W" value="1" />
+              </node>
             </node>
           </node>
         </node>
@@ -346,9 +410,105 @@
           </node>
         </node>
         <node concept="DUd2R" id="6xCODJVrQnY" role="1s$QAX">
-          <node concept="30nzp_" id="3uaVgiEKXfL" role="DUiSb">
-            <ref role="30nzpS" node="4Ew27B42Xge" resolve="AddEntry" />
-            <node concept="2X2XOa" id="3uaVgiEKXfM" role="30nDbQ" />
+          <node concept="30nzp_" id="7LHyCtd50j7" role="DUiSb">
+            <ref role="30nzpS" node="4Ew27B42Xgq" resolve="Entries" />
+            <node concept="3UVeCy" id="7LHyCtd50j8" role="30nDbQ">
+              <node concept="2ayrQO" id="7LHyCtd50j9" role="3UVeCz">
+                <node concept="1EpGR1" id="7LHyCtd50ja" role="1EpG3j">
+                  <ref role="1EpG3m" node="4Ew27B42Xgr" resolve="columnCell" />
+                </node>
+                <node concept="1EpGR1" id="7LHyCtd50jb" role="1EpG3j">
+                  <ref role="1EpG3m" node="1_y16CGAXlk" resolve="Author" />
+                </node>
+                <node concept="1EpGR1" id="7LHyCtd50jc" role="1EpG3j">
+                  <ref role="1EpG3m" node="1_y16CGAXlq" resolve="Title" />
+                </node>
+                <node concept="1EpGR1" id="7LHyCtd50jd" role="1EpG3j">
+                  <ref role="1EpG3m" node="1_y16CGAXm0" resolve="Year" />
+                </node>
+                <node concept="1EpGR1" id="7LHyCtd50je" role="1EpG3j">
+                  <ref role="1EpG3m" node="1_y16CGAXmd" resolve="Rank" />
+                </node>
+                <node concept="1EpGR1" id="7LHyCtd50jf" role="1EpG3j">
+                  <ref role="1EpG3m" node="1_y16CGAXmq" resolve="ReadStatus" />
+                </node>
+                <node concept="1EpGR1" id="7LHyCtd50jg" role="1EpG3j">
+                  <ref role="1EpG3m" node="1_y16CGAXmB" resolve="Priority" />
+                </node>
+                <node concept="3UOqEq" id="7LHyCtd50jh" role="2ay43_">
+                  <node concept="1NuoHz" id="7LHyCtd50jl" role="2aBVWM">
+                    <ref role="3elmOO" node="4Ew27B42Xgx" resolve="columnCell" />
+                    <node concept="V3Zc6" id="7LHyCtd50ji" role="1NuoHy">
+                      <node concept="V3Zdv" id="7LHyCtd50jj" role="V3Zc7">
+                        <node concept="o7Kjd" id="7LHyCtd50jk" role="oSbKM">
+                          <property role="o7K7r" value="Article" />
+                        </node>
+                      </node>
+                    </node>
+                  </node>
+                  <node concept="1NuoHz" id="7LHyCtd50jq" role="2aBVWM">
+                    <ref role="3elmOO" node="1_y16CGAXlw" resolve="Author" />
+                    <node concept="V3Zc6" id="7LHyCtd50jn" role="1NuoHy">
+                      <node concept="V3Zdv" id="7LHyCtd50jo" role="V3Zc7">
+                        <node concept="o7Kjd" id="7LHyCtd50jp" role="oSbKM">
+                          <property role="o7K7r" value="My Author" />
+                        </node>
+                      </node>
+                    </node>
+                  </node>
+                  <node concept="1NuoHz" id="7LHyCtd50jv" role="2aBVWM">
+                    <ref role="3elmOO" node="1_y16CGAXlK" resolve="Title" />
+                    <node concept="V3Zc6" id="7LHyCtd50js" role="1NuoHy">
+                      <node concept="V3Zdv" id="7LHyCtd50jt" role="V3Zc7">
+                        <node concept="o7Kjd" id="7LHyCtd50ju" role="oSbKM">
+                          <property role="o7K7r" value="My Title" />
+                        </node>
+                      </node>
+                    </node>
+                  </node>
+                  <node concept="1NuoHz" id="7LHyCtd50j$" role="2aBVWM">
+                    <ref role="3elmOO" node="1_y16CGAXm5" resolve="Year" />
+                    <node concept="V3Zc6" id="7LHyCtd50jx" role="1NuoHy">
+                      <node concept="V3Zdv" id="7LHyCtd50jy" role="V3Zc7">
+                        <node concept="o7Kjd" id="7LHyCtd50jz" role="oSbKM">
+                          <property role="o7K7r" value="2025" />
+                        </node>
+                      </node>
+                    </node>
+                  </node>
+                  <node concept="1NuoHz" id="7LHyCtd50jD" role="2aBVWM">
+                    <ref role="3elmOO" node="3uaVgiEKLzj" resolve="Rank" />
+                    <node concept="2mJbJ5" id="7LHyCtd50jA" role="1NuoHy">
+                      <node concept="2mJbG1" id="7LHyCtd50jB" role="2mJbJ6">
+                        <node concept="3eDL7N" id="7LHyCtd50jC" role="3n32fm">
+                          <ref role="3eDL7M" node="3uaVgiEKLxK" resolve="RANK1" />
+                        </node>
+                      </node>
+                    </node>
+                  </node>
+                  <node concept="1NuoHz" id="7LHyCtd50jI" role="2aBVWM">
+                    <ref role="3elmOO" node="3uaVgiEKLyA" resolve="ReadStatus" />
+                    <node concept="2mJbJ5" id="7LHyCtd50jF" role="1NuoHy">
+                      <node concept="2mJbG1" id="7LHyCtd50jG" role="2mJbJ6">
+                        <node concept="3eDL7N" id="7LHyCtd50jH" role="3n32fm">
+                          <ref role="3eDL7M" node="3uaVgiEKLxR" resolve="READ_STATUS_READ" />
+                        </node>
+                      </node>
+                    </node>
+                  </node>
+                  <node concept="1NuoHz" id="7LHyCtd50jN" role="2aBVWM">
+                    <ref role="3elmOO" node="3uaVgiEKLxT" resolve="Priority" />
+                    <node concept="2mJbJ5" id="7LHyCtd50jK" role="1NuoHy">
+                      <node concept="2mJbG1" id="7LHyCtd50jL" role="2mJbJ6">
+                        <node concept="3eDL7N" id="7LHyCtd50jM" role="3n32fm">
+                          <ref role="3eDL7M" node="3uaVgiEKLxG" resolve="PRIORITY_HIGH" />
+                        </node>
+                      </node>
+                    </node>
+                  </node>
+                </node>
+              </node>
+            </node>
           </node>
         </node>
       </node>
@@ -356,6 +516,45 @@
   </node>
   <node concept="1u6Luu" id="1_y16CGAXmO">
     <property role="TrG5h" value="JabRefImages" />
+    <node concept="28FJ0O" id="7LHyCtd50jW" role="28FJ0w">
+      <property role="TrG5h" value="Priority" />
+      <node concept="3eDL7N" id="7LHyCtd50jX" role="28FJ0D">
+        <ref role="3eDL7M" node="3uaVgiEKLxJ" resolve="PRIORITY_LOW" />
+      </node>
+      <node concept="3eDL7N" id="7LHyCtd50jY" role="28FJ0D">
+        <ref role="3eDL7M" node="3uaVgiEKLxI" resolve="PRIORITY_MEDIUM" />
+      </node>
+      <node concept="3eDL7N" id="7LHyCtd50jZ" role="28FJ0D">
+        <ref role="3eDL7M" node="3uaVgiEKLxG" resolve="PRIORITY_HIGH" />
+      </node>
+    </node>
+    <node concept="28FJ0O" id="7LHyCtd50k3" role="28FJ0w">
+      <property role="TrG5h" value="Rank" />
+      <node concept="3eDL7N" id="7LHyCtd50k4" role="28FJ0D">
+        <ref role="3eDL7M" node="3uaVgiEKLxK" resolve="RANK1" />
+      </node>
+      <node concept="3eDL7N" id="7LHyCtd50k5" role="28FJ0D">
+        <ref role="3eDL7M" node="3uaVgiEKLxL" resolve="RANK2" />
+      </node>
+      <node concept="3eDL7N" id="7LHyCtd50k6" role="28FJ0D">
+        <ref role="3eDL7M" node="3uaVgiEKLxM" resolve="RANK3" />
+      </node>
+      <node concept="3eDL7N" id="7LHyCtd50k7" role="28FJ0D">
+        <ref role="3eDL7M" node="3uaVgiEKLxN" resolve="RANK4" />
+      </node>
+      <node concept="3eDL7N" id="7LHyCtd50k8" role="28FJ0D">
+        <ref role="3eDL7M" node="3uaVgiEKLxO" resolve="RANK5" />
+      </node>
+    </node>
+    <node concept="28FJ0O" id="7LHyCtd50ka" role="28FJ0w">
+      <property role="TrG5h" value="ReadStatus" />
+      <node concept="3eDL7N" id="7LHyCtd50kb" role="28FJ0D">
+        <ref role="3eDL7M" node="3uaVgiEKLxR" resolve="READ_STATUS_READ" />
+      </node>
+      <node concept="3eDL7N" id="7LHyCtd50kc" role="28FJ0D">
+        <ref role="3eDL7M" node="3uaVgiEKLxS" resolve="READ_STATUS_SKIMMED" />
+      </node>
+    </node>
     <node concept="1u6Luv" id="1_y16CGAXmP" role="1u6Lvn">
       <property role="TrG5h" value="PRIORITY" />
       <property role="2mJlLi" value="../../icons/PRIORITY.png" />
