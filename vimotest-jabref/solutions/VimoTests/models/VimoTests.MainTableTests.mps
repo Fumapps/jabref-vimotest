@@ -388,16 +388,16 @@
                 <property role="ge_5W" value="2025" />
               </node>
               <node concept="ge_5U" id="7LHyCtd50jV" role="geqzs">
-                <property role="TrG5h" value="rank" />
-                <property role="ge_5W" value="1" />
+                <property role="TrG5h" value="ranking" />
+                <property role="ge_5W" value="rank1" />
               </node>
               <node concept="ge_5U" id="7LHyCtd50kd" role="geqzs">
-                <property role="TrG5h" value="status" />
-                <property role="ge_5W" value="read" />
+                <property role="TrG5h" value="readstatus" />
+                <property role="ge_5W" value="readstatus-1" />
               </node>
               <node concept="ge_5U" id="7LHyCtd50ke" role="geqzs">
                 <property role="TrG5h" value="priority" />
-                <property role="ge_5W" value="1" />
+                <property role="ge_5W" value="prio1" />
               </node>
             </node>
           </node>
