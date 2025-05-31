@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<solution name="VimoTests" uuid="9faad747-34ea-4417-8f1b-1fa8d6ceca4c" moduleVersion="0">
+<solution name="ViMoTests" uuid="9faad747-34ea-4417-8f1b-1fa8d6ceca4c" moduleVersion="0">
   <models>
     <modelRoot contentPath="${module}" type="default">
       <sourceRoot path="${module}/models" />
@@ -20,7 +20,7 @@
     <language slang="l:ceab5195-25ea-4f22-9b92-103b95ca8c0c:jetbrains.mps.lang.core" version="2" />
   </languageVersions>
   <dependencyVersions>
-    <module reference="9faad747-34ea-4417-8f1b-1fa8d6ceca4c(VimoTests)" version="0" />
+    <module reference="9faad747-34ea-4417-8f1b-1fa8d6ceca4c(ViMoTests)" version="0" />
     <module reference="b28932ae-6b0e-4f97-ad77-84f278001d91(de.vimotest.genplan)" version="0" />
   </dependencyVersions>
 </solution>

@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<model ref="r:1f64fbe2-8d6d-4109-a7d0-6f93619518dc(VimoTests.MainTableTests)">
+<model ref="r:1f64fbe2-8d6d-4109-a7d0-6f93619518dc(ViMoTests.MainTableTests)">
   <persistence version="9" />
   <languages>
     <use id="23ade25b-d490-4161-8365-ba6fd4e734ed" name="JabrefBibLanguage" version="0" />
+    <engage id="23ade25b-d490-4161-8365-ba6fd4e734ed" name="JabrefBibLanguage" />
     <devkit ref="d1a914ef-09af-4c66-a6d1-618e1f9114ea(de.vimotest.devkit)" />
   </languages>
   <imports />
