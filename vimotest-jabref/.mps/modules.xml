@@ -2,8 +2,8 @@
 <project version="4">
   <component name="MPSProject">
     <projectModules>
-      <modulePath path="$PROJECT_DIR$/languages/JabrefBibLanguage/JabrefBibLanguage.mpl" folder="" />
-      <modulePath path="$PROJECT_DIR$/solutions/VimoTests/VimoTests.msd" folder="" />
+      <modulePath path="$PROJECT_DIR$/languages/JabRefBibLanguage/JabRefBibLanguage.mpl" folder="" />
+      <modulePath path="$PROJECT_DIR$/solutions/ViMoTests/ViMoTests.msd" folder="" />
     </projectModules>
   </component>
 </project>

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<model ref="r:eacbe24e-0a99-45fd-a5a7-056774629ae0(JabrefBibLanguage.editor)">
+<model ref="r:eacbe24e-0a99-45fd-a5a7-056774629ae0(JabRefBibLanguage.editor)">
   <persistence version="9" />
   <languages>
     <use id="18bc6592-03a6-4e29-a83a-7ff23bde13ba" name="jetbrains.mps.lang.editor" version="14" />
@@ -7,7 +7,7 @@
     <devkit ref="fbc25dd2-5da4-483a-8b19-70928e1b62d7(jetbrains.mps.devkit.general-purpose)" />
   </languages>
   <imports>
-    <import index="8uzg" ref="r:61f9be7b-adb1-479e-b314-00ecbefb86d5(JabrefBibLanguage.structure)" />
+    <import index="8uzg" ref="r:61f9be7b-adb1-479e-b314-00ecbefb86d5(JabRefBibLanguage.structure)" />
     <import index="tpen" ref="r:00000000-0000-4000-0000-011c895902c3(jetbrains.mps.baseLanguage.editor)" />
     <import index="tpck" ref="r:00000000-0000-4000-0000-011c89590288(jetbrains.mps.lang.core.structure)" implicit="true" />
     <import index="tpco" ref="r:00000000-0000-4000-0000-011c89590284(jetbrains.mps.lang.core.editor)" implicit="true" />

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<model ref="r:d40c8d65-5a4d-4791-8de2-5a56fa2a047f(JabrefBibLanguage.typesystem)">
+<model ref="r:d40c8d65-5a4d-4791-8de2-5a56fa2a047f(JabRefBibLanguage.typesystem)">
   <persistence version="9" />
   <languages>
     <use id="7a5dda62-9140-4668-ab76-d5ed1746f2b2" name="jetbrains.mps.lang.typesystem" version="5" />

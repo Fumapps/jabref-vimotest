@@ -2,13 +2,13 @@
 <model ref="r:1f64fbe2-8d6d-4109-a7d0-6f93619518dc(ViMoTests.MainTableTests)">
   <persistence version="9" />
   <languages>
-    <use id="23ade25b-d490-4161-8365-ba6fd4e734ed" name="JabrefBibLanguage" version="0" />
-    <engage id="23ade25b-d490-4161-8365-ba6fd4e734ed" name="JabrefBibLanguage" />
+    <use id="23ade25b-d490-4161-8365-ba6fd4e734ed" name="JabRefBibLanguage" version="0" />
+    <engage id="23ade25b-d490-4161-8365-ba6fd4e734ed" name="JabRefBibLanguage" />
     <devkit ref="d1a914ef-09af-4c66-a6d1-618e1f9114ea(de.vimotest.devkit)" />
   </languages>
   <imports />
   <registry>
-    <language id="23ade25b-d490-4161-8365-ba6fd4e734ed" name="JabrefBibLanguage">
+    <language id="23ade25b-d490-4161-8365-ba6fd4e734ed" name="JabRefBibLanguage">
       <concept id="6651733332838442307" name="JabrefBibLanguage.structure.BibEntryField" flags="ng" index="ge_5U">
         <property id="6651733332838442309" name="value" index="ge_5W" />
       </concept>
@@ -179,7 +179,7 @@
     </language>
   </registry>
   <node concept="103ZX$" id="6xCODJVqSLk">
-    <property role="TrG5h" value="JabrefMainTableViewModel" />
+    <property role="TrG5h" value="JabRefMainTableViewModel" />
     <node concept="103ZXx" id="6xCODJVqSLl" role="103ZXC">
       <node concept="3Vw88J" id="6xCODJVqSLm" role="1006ar">
         <property role="TrG5h" value="LoadView" />
@@ -364,7 +364,7 @@
     </node>
   </node>
   <node concept="30n1Qd" id="6xCODJVrQnR">
-    <property role="TrG5h" value="JabrefMainTableViewModelTests" />
+    <property role="TrG5h" value="JabRefMainTableViewModelTests" />
     <ref role="30n1PB" node="6xCODJVqSLk" resolve="JabrefMainTableViewModel" />
     <node concept="3LKzX3" id="6xCODJVrQnS" role="30n1Qb">
       <property role="TrG5h" value="Default" />
