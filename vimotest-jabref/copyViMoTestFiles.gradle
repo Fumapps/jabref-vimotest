@@ -1,0 +1,25 @@
+
+task copyGeneratedSources {
+    group 'copy-vimotest-generated-sources'
+
+    def generatedDir = "$rootDir/vimotest-jabref/solutions/ViMoTests/source_gen"
+    println "Copying generated sources from $generatedDir to src/generated/java"
+    delete 'src/generated'
+
+    copy {
+        from generatedDir
+        into 'src/generated/java'
+        include '**/*.java'
+        exclude '**/*Test.java', '**/*ViewModelTestSetupImpl.java'
+    }
+    copy {
+        from generatedDir
+        into 'src/generated/test'
+        include '**/*Test.java'
+    }
+}
+
+// Optionally, clean the generated directory to avoid stale files
+clean.doLast {
+    delete 'src/generated'
+}
