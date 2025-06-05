@@ -8,13 +8,13 @@ task copyGeneratedSources {
 
     copy {
         from generatedDir
-        into 'src/generated/java'
+        into 'src-gen/vimotest/java'
         include '**/*.java'
         exclude '**/*Test.java', '**/*ViewModelTestSetupImpl.java'
     }
     copy {
         from generatedDir
-        into 'src/generated/test'
+        into 'src/test-gen/java'
         include '**/*Test.java'
     }
 }
