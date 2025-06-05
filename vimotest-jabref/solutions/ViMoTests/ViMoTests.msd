@@ -11,7 +11,7 @@
     </facet>
   </facets>
   <languageVersions>
-    <language slang="l:23ade25b-d490-4161-8365-ba6fd4e734ed:JabrefBibLanguage" version="0" />
+    <language slang="l:23ade25b-d490-4161-8365-ba6fd4e734ed:JabRefBibLanguage" version="0" />
     <language slang="l:bf897046-1e4e-4c49-b9d6-a7ab6d3f8703:alfi" version="1" />
     <language slang="l:611ecc9e-0703-4ab9-a13c-fb396c607716:de.vimotest.types" version="0" />
     <language slang="l:ce7915b5-36b4-4478-a67c-f5a8a72ed4a0:de.vimotest.viewmodel" version="0" />

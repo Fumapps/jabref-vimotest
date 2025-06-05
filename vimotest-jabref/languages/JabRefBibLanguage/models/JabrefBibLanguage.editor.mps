@@ -2,7 +2,7 @@
 <model ref="r:eacbe24e-0a99-45fd-a5a7-056774629ae0(JabRefBibLanguage.editor)">
   <persistence version="9" />
   <languages>
-    <use id="18bc6592-03a6-4e29-a83a-7ff23bde13ba" name="jetbrains.mps.lang.editor" version="14" />
+    <use id="18bc6592-03a6-4e29-a83a-7ff23bde13ba" name="jetbrains.mps.lang.editor" version="15" />
     <use id="aee9cad2-acd4-4608-aef2-0004f6a1cdbd" name="jetbrains.mps.lang.actions" version="4" />
     <devkit ref="fbc25dd2-5da4-483a-8b19-70928e1b62d7(jetbrains.mps.devkit.general-purpose)" />
   </languages>
@@ -471,7 +471,7 @@
             </node>
             <node concept="3clFbF" id="1nonshGplcM" role="3cqZAp">
               <node concept="37vLTw" id="1nonshGplAK" role="3clFbG">
-                <ref role="3cqZAo" node="1nonshGplAG" resolve="node" />
+                <ref role="3cqZAo" node="1nonshGplAG" resolve="entry" />
               </node>
             </node>
           </node>

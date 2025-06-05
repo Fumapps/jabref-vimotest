@@ -53,7 +53,7 @@
     <property role="19KtqR" value="true" />
     <property role="34LRSv" value="bib" />
     <property role="3GE5qa" value="bib" />
-    <ref role="1TJDcQ" to="tpck:gw2VY9q" />
+    <ref role="1TJDcQ" to="tpck:gw2VY9q" resolve="BaseConcept" />
     <node concept="1TJgyj" id="UU9dkQ0NgR" role="1TKVEi">
       <property role="IQ2ns" value="1061201160351986743" />
       <property role="20lmBu" value="fLJjDmT/aggregation" />
@@ -70,7 +70,7 @@
     <property role="TrG5h" value="BibEntry" />
     <property role="34LRSv" value="@Entry" />
     <property role="3GE5qa" value="bib" />
-    <ref role="1TJDcQ" to="tpck:gw2VY9q" />
+    <ref role="1TJDcQ" to="tpck:gw2VY9q" resolve="BaseConcept" />
     <node concept="1TJgyi" id="UU9dkQ0NgQ" role="1TKVEl">
       <property role="IQ2nx" value="1061201160351986742" />
       <property role="TrG5h" value="type" />
@@ -104,7 +104,7 @@
     <property role="EcuMT" value="6651733332838442307" />
     <property role="TrG5h" value="BibEntryField" />
     <property role="3GE5qa" value="bib" />
-    <ref role="1TJDcQ" to="tpck:gw2VY9q" />
+    <ref role="1TJDcQ" to="tpck:gw2VY9q" resolve="BaseConcept" />
     <node concept="PrWs8" id="5LfH3_ctul4" role="PzmwI">
       <ref role="PrY4T" to="tpck:h0TrEE$" resolve="INamedConcept" />
     </node>
@@ -119,7 +119,7 @@
     <property role="TrG5h" value="BibComment" />
     <property role="34LRSv" value="@Comment" />
     <property role="3GE5qa" value="bib" />
-    <ref role="1TJDcQ" to="tpck:gw2VY9q" />
+    <ref role="1TJDcQ" to="tpck:gw2VY9q" resolve="BaseConcept" />
     <node concept="1TJgyi" id="7UfgHTDO6FE" role="1TKVEl">
       <property role="IQ2nx" value="9119581293473983210" />
       <property role="TrG5h" value="value" />
@@ -133,7 +133,7 @@
     <property role="EcuMT" value="9119581293474093216" />
     <property role="TrG5h" value="EmptyBibContent" />
     <property role="3GE5qa" value="bib" />
-    <ref role="1TJDcQ" to="tpck:gw2VY9q" />
+    <ref role="1TJDcQ" to="tpck:gw2VY9q" resolve="BaseConcept" />
     <node concept="PrWs8" id="7UfgHTDOxyx" role="PzmwI">
       <ref role="PrY4T" node="UU9dkQ0NgS" resolve="IBibFileContent" />
     </node>
@@ -143,7 +143,7 @@
     <property role="TrG5h" value="BibFileTestContext" />
     <property role="34LRSv" value="bib" />
     <property role="3GE5qa" value="vimotest" />
-    <ref role="1TJDcQ" to="tpck:gw2VY9q" />
+    <ref role="1TJDcQ" to="tpck:gw2VY9q" resolve="BaseConcept" />
     <node concept="PrWs8" id="6xCODJVqSLA" role="PzmwI">
       <ref role="PrY4T" to="53m0:2Yd1qrJOMZM" resolve="ITestScenarioContext" />
     </node>

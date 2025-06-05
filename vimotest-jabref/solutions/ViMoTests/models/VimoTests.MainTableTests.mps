@@ -9,18 +9,18 @@
   <imports />
   <registry>
     <language id="23ade25b-d490-4161-8365-ba6fd4e734ed" name="JabRefBibLanguage">
-      <concept id="6651733332838442307" name="JabrefBibLanguage.structure.BibEntryField" flags="ng" index="ge_5U">
+      <concept id="6651733332838442307" name="JabRefBibLanguage.structure.BibEntryField" flags="ng" index="ge_5U">
         <property id="6651733332838442309" name="value" index="ge_5W" />
       </concept>
-      <concept id="7523494744902306904" name="JabrefBibLanguage.structure.BibFileTestContext" flags="ng" index="2j0PV3">
+      <concept id="7523494744902306904" name="JabRefBibLanguage.structure.BibFileTestContext" flags="ng" index="2j0PV3">
         <child id="7523494744902501827" name="bib" index="2j1_to" />
       </concept>
-      <concept id="1061201160351986741" name="JabrefBibLanguage.structure.BibEntry" flags="ng" index="SIh3w">
+      <concept id="1061201160351986741" name="JabRefBibLanguage.structure.BibEntry" flags="ng" index="SIh3w">
         <property id="1061201160351986742" name="type" index="SIh3z" />
         <property id="1061201160351986747" name="key" index="SIh3I" />
         <child id="6651733332838456549" name="fields" index="geqzs" />
       </concept>
-      <concept id="1061201160351986740" name="JabrefBibLanguage.structure.BibFile" flags="ng" index="SIh3x">
+      <concept id="1061201160351986740" name="JabRefBibLanguage.structure.BibFile" flags="ng" index="SIh3x">
         <child id="1061201160351986743" name="contents" index="SIh3y" />
       </concept>
     </language>
@@ -365,7 +365,7 @@
   </node>
   <node concept="30n1Qd" id="6xCODJVrQnR">
     <property role="TrG5h" value="JabRefMainTableViewModelTests" />
-    <ref role="30n1PB" node="6xCODJVqSLk" resolve="JabrefMainTableViewModel" />
+    <ref role="30n1PB" node="6xCODJVqSLk" resolve="JabRefMainTableViewModel" />
     <node concept="3LKzX3" id="6xCODJVrQnS" role="30n1Qb">
       <property role="TrG5h" value="Default" />
       <node concept="1IbZgy" id="6xCODJVrQnT" role="DUd2K">
