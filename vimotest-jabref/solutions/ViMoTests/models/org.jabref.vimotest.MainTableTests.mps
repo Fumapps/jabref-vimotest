@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<model ref="r:1f64fbe2-8d6d-4109-a7d0-6f93619518dc(ViMoTests.MainTableTests)">
+<model ref="r:1f64fbe2-8d6d-4109-a7d0-6f93619518dc(org.jabref.vimotest.MainTableTests)">
   <persistence version="9" />
   <languages>
     <use id="23ade25b-d490-4161-8365-ba6fd4e734ed" name="JabRefBibLanguage" version="0" />

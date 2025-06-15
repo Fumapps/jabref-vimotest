@@ -17,6 +17,18 @@ task copyGeneratedSources {
         into 'src/test-gen/java'
         include '**/*Test.java'
     }
+
+    doLast {
+        // Alle kopierten Java-Dateien transformieren
+        [ 'src-gen/vimotest/java', 'src/test-gen/java' ].each { dir ->
+            fileTree(dir: dir, include: '**/*.java').each { File javaFile ->
+                def text = javaFile.text
+                text = text.replaceAll('(?<!\\w)Assert\\.', 'Assertions.')
+                text = text.replaceAll('org\\.junit\\.Assert', 'org.junit.jupiter.api.Assertions')
+                javaFile.text = text
+            }
+        }
+    }
 }
 
 // Optionally, clean the generated directory to avoid stale files
