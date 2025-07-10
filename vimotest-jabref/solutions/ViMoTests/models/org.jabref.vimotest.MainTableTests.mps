@@ -143,6 +143,9 @@
       </concept>
       <concept id="777152910168882963" name="de.vimotest.viewmodel.structure.ViewModelData" flags="ng" index="103ZXB" />
       <concept id="5775867078593476371" name="de.vimotest.viewmodel.structure.TextColorFeature" flags="ng" index="31hZui" />
+      <concept id="6112733486387704342" name="de.vimotest.viewmodel.structure.GenerationConfig" flags="ng" index="1a4JyI">
+        <property id="9193638033335797030" name="generateAbstractViewModel" index="2H5xwM" />
+      </concept>
       <concept id="2820520252859978186" name="de.vimotest.viewmodel.structure.ImageDefinitionRef" flags="ng" index="3eDL7N">
         <reference id="2820520252859978187" name="image" index="3eDL7M" />
       </concept>
@@ -629,6 +632,9 @@
       <property role="LsnsT" value="16" />
       <property role="Lsnro" value="16" />
     </node>
+  </node>
+  <node concept="1a4JyI" id="41oFgfaFP1P">
+    <property role="2H5xwM" value="true" />
   </node>
 </model>
 
