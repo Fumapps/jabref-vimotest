@@ -5,7 +5,7 @@ package org.jabref.vimotest.MainTableTests;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.BeforeEach;
 import java.util.List;
-import org.junit.Assert;
+import org.junit.jupiter.api.Assertions;
 
 public class JabRefMainTableViewModelTests_Test {
   private JabRefMainTableViewModel sut;
@@ -43,16 +43,16 @@ public class JabRefMainTableViewModelTests_Test {
 
   public void then_Entries_has_1_rows() {
     List<JabRefMainTableViewModelEntriesRow> actualRows = this.sut.getEntriesTableRows();
-    Assert.assertEquals(1, actualRows.size());
+    Assertions.assertEquals(1, actualRows.size());
     // {
     JabRefMainTableViewModelEntriesRow row0 = actualRows.get(1 - 1);
-    Assert.assertEquals("Article", row0.getColumnCellLabelText());
-    Assert.assertEquals("My Author", row0.getAuthorLabelText());
-    Assert.assertEquals("My Title", row0.getTitleLabelText());
-    Assert.assertEquals("2025", row0.getYearLabelText());
-    Assert.assertEquals("RANK1", row0.getRankImageName());
-    Assert.assertEquals("READ_STATUS_READ", row0.getReadStatusImageName());
-    Assert.assertEquals("PRIORITY_HIGH", row0.getPriorityImageName());
+    Assertions.assertEquals("Article", row0.getColumnCellLabelText());
+    Assertions.assertEquals("My Author", row0.getAuthorLabelText());
+    Assertions.assertEquals("My Title", row0.getTitleLabelText());
+    Assertions.assertEquals("2025", row0.getYearLabelText());
+    Assertions.assertEquals("RANK1", row0.getRankImageName());
+    Assertions.assertEquals("READ_STATUS_READ", row0.getReadStatusImageName());
+    Assertions.assertEquals("PRIORITY_HIGH", row0.getPriorityImageName());
     // }
   }
 }

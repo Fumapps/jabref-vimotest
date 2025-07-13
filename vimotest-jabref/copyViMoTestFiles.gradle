@@ -2,23 +2,23 @@
 task copyGeneratedSources {
     group 'copy-vimotest-generated-sources'
 
-    def generatedDir = "$rootDir/vimotest-jabref/solutions/ViMoTests/source_gen"
-    println "Copying generated sources from $generatedDir to src/generated/java"
-    delete 'src/generated'
-
-    copy {
-        from generatedDir
-        into 'src-gen/vimotest/java'
-        include '**/*.java'
-        exclude '**/*Test.java', '**/*ViewModelTestSetupImpl.java'
-    }
-    copy {
-        from generatedDir
-        into 'src/test-gen/java'
-        include '**/*Test.java'
-    }
-
     doLast {
+        def generatedDir = "$rootDir/vimotest-jabref/solutions/ViMoTests/source_gen"
+        println "Copying generated sources from $generatedDir to src/generated/java"
+        delete 'src/generated'
+
+        copy {
+            from generatedDir
+            into 'src-gen/vimotest/java'
+            include '**/*.java'
+            exclude '**/*Test.java', '**/*ViewModelTestSetupImpl.java'
+        }
+        copy {
+            from generatedDir
+            into 'src/test-gen/java'
+            include '**/*Test.java'
+        }
+
         // Alle kopierten Java-Dateien transformieren
         [ 'src-gen/vimotest/java', 'src/test-gen/java' ].each { dir ->
             fileTree(dir: dir, include: '**/*.java').each { File javaFile ->

@@ -2,19 +2,27 @@ package org.jabref.vimotest.MainTableTests;
 
 import javafx.beans.property.IntegerProperty;
 import javafx.beans.property.ListProperty;
+import org.jabref.gui.*;
+import org.jabref.gui.importer.NewEntryAction;
 import org.jabref.gui.maintable.MainTableDataModel;
 import org.jabref.gui.preferences.GuiPreferences;
 import org.jabref.gui.util.OptionalObjectProperty;
+import org.jabref.logic.ai.AiService;
 import org.jabref.logic.util.CurrentThreadTaskExecutor;
 import org.jabref.model.database.BibDatabaseContext;
+import org.jabref.model.entry.BibEntryTypesManager;
+import org.jabref.model.entry.types.StandardEntryType;
 import org.jabref.model.groups.GroupTreeNode;
 import org.jabref.model.search.query.SearchQuery;
+import org.jabref.model.util.FileUpdateMonitor;
 import org.mockito.Mockito;
 
+import javax.swing.undo.UndoManager;
 import java.util.List;
 
 public class JabRefMainTableViewModelImpl extends JabRefMainTableViewModel {
     private MainTableDataModel wrappedDataModel;
+    private BibDatabaseContext context = new BibDatabaseContext();
 
     @Override
     public List<JabRefMainTableViewModelEntriesRow> getEntriesTableRows() {
@@ -25,7 +33,6 @@ public class JabRefMainTableViewModelImpl extends JabRefMainTableViewModel {
 
     @Override
     public void loadView() {
-        BibDatabaseContext context = new BibDatabaseContext();
         CurrentThreadTaskExecutor taskExecutor = new CurrentThreadTaskExecutor();
         GuiPreferences preferences = Mockito.mock(GuiPreferences.class);
         ListProperty<GroupTreeNode> groupTreeNodes = Mockito.mock(ListProperty.class);
@@ -39,6 +46,16 @@ public class JabRefMainTableViewModelImpl extends JabRefMainTableViewModel {
 
     @Override
     public void addEntryClicked() {
+        DialogService dialogService = Mockito.mock(DialogService.class);
+        GuiPreferences preferences = Mockito.mock(GuiPreferences.class);
+        StateManager stateManager = Mockito.mock(StateManager.class);
+        CurrentThreadTaskExecutor taskExecutor = new CurrentThreadTaskExecutor();
 
+        LibraryTab libraryTab = LibraryTab.createLibraryTab(context, Mockito.mock(LibraryTabContainer.class),
+                dialogService, Mockito.mock(AiService.class), preferences, stateManager, Mockito.mock(FileUpdateMonitor.class),
+                Mockito.mock(BibEntryTypesManager.class), Mockito.mock(UndoManager.class), Mockito.mock(ClipBoardManager.class),
+                taskExecutor);
+        new NewEntryAction(() -> libraryTab, StandardEntryType.Article, dialogService, preferences, stateManager)
+                .execute();
     }
 }
