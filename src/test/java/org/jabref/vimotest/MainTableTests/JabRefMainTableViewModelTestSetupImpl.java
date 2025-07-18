@@ -7,11 +7,13 @@ public class JabRefMainTableViewModelTestSetupImpl extends JabRefMainTableViewMo
   @Override
   public void Init() {
   }
-  @Override
-  public void SetBibFileTestContext() {
-  }
 
-  @Override
+    @Override
+    public void SetBibFileTestContext(String bibFileContent) {
+
+    }
+
+    @Override
   public JabRefMainTableViewModel BuildSut() {
       JabRefMainTableViewModel vm = new JabRefMainTableViewModelImpl();
 

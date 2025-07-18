@@ -7,6 +7,7 @@
   </models>
   <facets>
     <facet type="generator" planModel="r:7b102bad-a155-45eb-8437-c093cc5aff64(jabref@genplan)" />
+    <facet type="plaintext" folders="true" />
   </facets>
   <dependencies>
     <dependency reexport="false">23ade25b-d490-4161-8365-ba6fd4e734ed(JabRefBibLanguage)</dependency>
