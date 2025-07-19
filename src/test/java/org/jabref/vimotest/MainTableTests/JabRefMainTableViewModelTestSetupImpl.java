@@ -9,6 +9,7 @@ public class JabRefMainTableViewModelTestSetupImpl extends JabRefMainTableViewMo
 
     @Override
     public void Init() {
+        viewModel = new JabRefMainTableViewModelImpl();
     }
 
     @Override
