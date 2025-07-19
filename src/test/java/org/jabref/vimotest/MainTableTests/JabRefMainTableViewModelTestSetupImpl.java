@@ -4,19 +4,22 @@ package org.jabref.vimotest.MainTableTests;
 
 
 public class JabRefMainTableViewModelTestSetupImpl extends JabRefMainTableViewModelTestSetup {
-  @Override
-  public void Init() {
-  }
+
+    private JabRefMainTableViewModelImpl viewModel;
 
     @Override
-    public void SetBibFileTestContext(String bibFileContent) {
-
+    public void Init() {
     }
 
     @Override
-  public JabRefMainTableViewModel BuildSut() {
-      JabRefMainTableViewModel vm = new JabRefMainTableViewModelImpl();
+    public void SetBibFileTestContext(String bibFileContent) {
+        viewModel.setBibDatabaseContext(bibFileContent);
+    }
 
-      return vm;
-  }
+    @Override
+    public JabRefMainTableViewModel BuildSut() {
+        viewModel = new JabRefMainTableViewModelImpl();
+
+        return viewModel;
+    }
 }

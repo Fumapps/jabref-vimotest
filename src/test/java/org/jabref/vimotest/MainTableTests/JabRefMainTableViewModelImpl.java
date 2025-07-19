@@ -3,11 +3,15 @@ package org.jabref.vimotest.MainTableTests;
 import javafx.beans.property.IntegerProperty;
 import javafx.beans.property.ListProperty;
 import org.jabref.gui.*;
+import org.jabref.gui.groups.GroupsPreferences;
 import org.jabref.gui.importer.NewEntryAction;
 import org.jabref.gui.maintable.MainTableDataModel;
+import org.jabref.gui.maintable.NameDisplayPreferences;
 import org.jabref.gui.preferences.GuiPreferences;
+import org.jabref.gui.preferences.JabRefGuiPreferences;
 import org.jabref.gui.util.OptionalObjectProperty;
 import org.jabref.logic.ai.AiService;
+import org.jabref.logic.search.SearchPreferences;
 import org.jabref.logic.util.CurrentThreadTaskExecutor;
 import org.jabref.model.database.BibDatabaseContext;
 import org.jabref.model.entry.BibEntryTypesManager;
@@ -34,13 +38,17 @@ public class JabRefMainTableViewModelImpl extends JabRefMainTableViewModel {
     @Override
     public void loadView() {
         CurrentThreadTaskExecutor taskExecutor = new CurrentThreadTaskExecutor();
-        GuiPreferences preferences = Mockito.mock(GuiPreferences.class);
+        GuiPreferences preferences = JabRefGuiPreferences.createNew();
         ListProperty<GroupTreeNode> groupTreeNodes = Mockito.mock(ListProperty.class);
         OptionalObjectProperty<SearchQuery> searchQuery = Mockito.mock(OptionalObjectProperty.class);
         IntegerProperty resultSizeProperty = Mockito.mock(IntegerProperty.class);
 
         wrappedDataModel = new MainTableDataModel(context, preferences, taskExecutor,
                 null, groupTreeNodes, searchQuery, resultSizeProperty);
+
+    }
+
+    void setBibDatabaseContext(String bibFileContent) {
 
     }
 

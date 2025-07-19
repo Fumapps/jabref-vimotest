@@ -419,6 +419,10 @@ public class JabRefGuiPreferences extends JabRefCliPreferences implements GuiPre
         return JabRefGuiPreferences.singleton;
     }
 
+    public static JabRefGuiPreferences createNew() {
+        return new JabRefGuiPreferences();
+    }
+
     public CopyToPreferences getCopyToPreferences() {
         if (copyToPreferences != null) {
             return copyToPreferences;
