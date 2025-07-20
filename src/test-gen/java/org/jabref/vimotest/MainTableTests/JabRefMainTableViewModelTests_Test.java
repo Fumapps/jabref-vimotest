@@ -10,7 +10,7 @@ import org.junit.jupiter.api.Assertions;
 public class JabRefMainTableViewModelTests_Test {
   private JabRefMainTableViewModel sut;
   private JabRefMainTableViewModelTestSetup testSetup;
-  private String file = "@Article{MyArticle,\n  author={My Author},\n  title={My Title},\n  year={2025},\n  ranking={rank1},\n  readstatus={readstatus-1},\n  priority={prio1}\n}";
+  private String file = "@Article{MyArticle,\n  author={My Author},\n  title={My Title},\n  year={2025},\n  ranking={rank1},\n  readstatus={read},\n  priority={prio1}\n}";
   @Test
   public void test_Default_given_file_when_LoadView_then_Entries_has_1_rows() throws Exception {
     this.given_file();

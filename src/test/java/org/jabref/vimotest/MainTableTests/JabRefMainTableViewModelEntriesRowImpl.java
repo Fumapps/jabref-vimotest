@@ -2,8 +2,10 @@ package org.jabref.vimotest.MainTableTests;
 
 import org.jabref.gui.maintable.BibEntryTableViewModel;
 import org.jabref.gui.specialfields.SpecialFieldValueViewModel;
+import org.jabref.model.entry.field.InternalField;
 import org.jabref.model.entry.field.SpecialField;
 import org.jabref.model.entry.field.StandardField;
+import org.jabref.model.entry.types.StandardEntryType;
 
 public class JabRefMainTableViewModelEntriesRowImpl extends JabRefMainTableViewModelEntriesRow {
     private final BibEntryTableViewModel wrapped;
@@ -14,7 +16,7 @@ public class JabRefMainTableViewModelEntriesRowImpl extends JabRefMainTableViewM
 
     @Override
     public String getColumnCellLabelText() {
-        return wrapped.getField(StandardField.TYPE).getValueOrElse("");
+        return wrapped.getField(InternalField.TYPE_HEADER).getValueOrElse("");
     }
 
     @Override

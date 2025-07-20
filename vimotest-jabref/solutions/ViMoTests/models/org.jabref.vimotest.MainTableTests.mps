@@ -397,7 +397,7 @@
               </node>
               <node concept="ge_5U" id="7LHyCtd50kd" role="geqzs">
                 <property role="TrG5h" value="readstatus" />
-                <property role="ge_5W" value="readstatus-1" />
+                <property role="ge_5W" value="read" />
               </node>
               <node concept="ge_5U" id="7LHyCtd50ke" role="geqzs">
                 <property role="TrG5h" value="priority" />
