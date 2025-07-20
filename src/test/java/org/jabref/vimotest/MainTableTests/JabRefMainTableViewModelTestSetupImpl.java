@@ -19,8 +19,6 @@ public class JabRefMainTableViewModelTestSetupImpl extends JabRefMainTableViewMo
 
     @Override
     public JabRefMainTableViewModel BuildSut() {
-        viewModel = new JabRefMainTableViewModelImpl();
-
         return viewModel;
     }
 }
