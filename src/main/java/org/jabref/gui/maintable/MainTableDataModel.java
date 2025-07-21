@@ -65,6 +65,7 @@ public class MainTableDataModel {
 
     private Optional<MatcherSet> groupsMatcher;
 
+
     public MainTableDataModel(BibDatabaseContext context,
                               GuiPreferences preferences,
                               TaskExecutor taskExecutor,

@@ -38,6 +38,9 @@
       <concept id="8948051009467167877" name="de.vimotest.viewmodel.testing.structure.ViewCommandInvocationAction" flags="ng" index="27s6xY">
         <reference id="8948051009467187564" name="targetCommand" index="27sXQn" />
       </concept>
+      <concept id="9006611305737327152" name="de.vimotest.viewmodel.testing.structure.ContextReference" flags="ng" index="8w7HN">
+        <reference id="9006611305737327954" name="ref" index="8w7Kh" />
+      </concept>
       <concept id="5447508759369797102" name="de.vimotest.viewmodel.testing.structure.WidgetTableRowsCheckValue" flags="ng" index="2ayrQO">
         <child id="5447508759369822399" name="rows" index="2ay43_" />
         <child id="7922086861434398932" name="columnCheckInfos" index="1EpG3j" />
@@ -68,9 +71,13 @@
         <reference id="3426401106045121502" name="widget" index="30nzpS" />
         <child id="3426401106045146960" name="check" index="30nDbQ" />
       </concept>
+      <concept id="8996304390297115758" name="de.vimotest.viewmodel.testing.structure.ClickCommandAction" flags="ng" index="3eaLt3" />
       <concept id="7199841511154467673" name="de.vimotest.viewmodel.testing.structure.ComposedWhenThenParts" flags="ng" index="1s$VFG">
         <child id="7199841511154487303" name="actionsWithDescription" index="1s$QAM" />
         <child id="7199841511154487304" name="assertsWithDescription" index="1s$QAX" />
+      </concept>
+      <concept id="5678667081004710962" name="de.vimotest.viewmodel.testing.structure.ViewWidgetCommandAction" flags="ng" index="3ucX6H">
+        <reference id="5678667081004731049" name="widget" index="3ucQsQ" />
       </concept>
       <concept id="7922086861434398150" name="de.vimotest.viewmodel.testing.structure.ColumnCheckInfo" flags="ng" index="1EpGR1">
         <reference id="7922086861434398929" name="columnDefinition" index="1EpG3m" />
@@ -373,7 +380,7 @@
       <property role="TrG5h" value="Default" />
       <node concept="1IbZgy" id="6xCODJVrQnT" role="DUd2K">
         <node concept="2j0PV3" id="6xCODJVrQo0" role="DUiTU">
-          <property role="TrG5h" value="file" />
+          <property role="TrG5h" value="articleFile" />
           <node concept="SIh3x" id="6xCODJVrQo2" role="2j1_to">
             <property role="TrG5h" value="file.bib" />
             <node concept="SIh3w" id="6xCODJVrQo3" role="SIh3y">
@@ -506,6 +513,420 @@
                       <node concept="2mJbG1" id="7LHyCtd50jL" role="2mJbJ6">
                         <node concept="3eDL7N" id="7LHyCtd50jM" role="3n32fm">
                           <ref role="3eDL7M" node="3uaVgiEKLxG" resolve="PRIORITY_HIGH" />
+                        </node>
+                      </node>
+                    </node>
+                  </node>
+                </node>
+              </node>
+            </node>
+          </node>
+        </node>
+      </node>
+    </node>
+    <node concept="3LKzX3" id="4V8pUeqNMDj" role="30n1Qb">
+      <property role="TrG5h" value="Two Entries" />
+      <node concept="1IbZgy" id="4V8pUeqNMDk" role="DUd2K">
+        <node concept="2j0PV3" id="4V8pUeqNMDr" role="DUiTU">
+          <property role="TrG5h" value="twoEntries" />
+          <node concept="SIh3x" id="4V8pUeqNMDs" role="2j1_to">
+            <property role="TrG5h" value="file.bib" />
+            <node concept="SIh3w" id="4V8pUeqNMDt" role="SIh3y">
+              <property role="SIh3z" value="InCollection" />
+              <property role="SIh3I" value="Entry1" />
+              <node concept="ge_5U" id="4V8pUeqNMDu" role="geqzs">
+                <property role="TrG5h" value="author" />
+                <property role="ge_5W" value="Author1" />
+              </node>
+              <node concept="ge_5U" id="4V8pUeqNMDv" role="geqzs">
+                <property role="TrG5h" value="title" />
+                <property role="ge_5W" value="Title1" />
+              </node>
+              <node concept="ge_5U" id="4V8pUeqNMDx" role="geqzs">
+                <property role="TrG5h" value="ranking" />
+                <property role="ge_5W" value="rank3" />
+              </node>
+              <node concept="ge_5U" id="4V8pUeqNMDy" role="geqzs">
+                <property role="TrG5h" value="readstatus" />
+                <property role="ge_5W" value="skimmed" />
+              </node>
+              <node concept="ge_5U" id="4V8pUeqNMDz" role="geqzs">
+                <property role="TrG5h" value="priority" />
+                <property role="ge_5W" value="prio2" />
+              </node>
+            </node>
+            <node concept="SIh3w" id="4V8pUeqNMEm" role="SIh3y">
+              <property role="SIh3z" value="Book" />
+              <property role="SIh3I" value="Entry1" />
+              <node concept="ge_5U" id="4V8pUeqNMEn" role="geqzs">
+                <property role="TrG5h" value="author" />
+                <property role="ge_5W" value="Author2" />
+              </node>
+              <node concept="ge_5U" id="4V8pUeqNMEo" role="geqzs">
+                <property role="TrG5h" value="title" />
+                <property role="ge_5W" value="Title2" />
+              </node>
+              <node concept="ge_5U" id="4V8pUeqNMEp" role="geqzs">
+                <property role="TrG5h" value="ranking" />
+                <property role="ge_5W" value="rank5" />
+              </node>
+              <node concept="ge_5U" id="4V8pUeqNMEr" role="geqzs">
+                <property role="TrG5h" value="priority" />
+                <property role="ge_5W" value="prio3" />
+              </node>
+            </node>
+          </node>
+        </node>
+      </node>
+      <node concept="1s$VFG" id="4V8pUeqNMDm" role="1s$QAY">
+        <node concept="DUd5q" id="4V8pUeqNMDn" role="1s$QAM">
+          <node concept="27s6xY" id="4V8pUeqNMD$" role="DUiS9">
+            <ref role="27sXQn" node="6xCODJVqSLm" resolve="LoadView" />
+          </node>
+        </node>
+        <node concept="DUd2R" id="4V8pUeqNMDp" role="1s$QAX">
+          <node concept="30nzp_" id="4V8pUeqNMDA" role="DUiSb">
+            <ref role="30nzpS" node="4Ew27B42Xgq" resolve="Entries" />
+            <node concept="3UVeCy" id="4V8pUeqNMDB" role="30nDbQ">
+              <node concept="2ayrQO" id="4V8pUeqNMDC" role="3UVeCz">
+                <node concept="1EpGR1" id="4V8pUeqNMDD" role="1EpG3j">
+                  <ref role="1EpG3m" node="4Ew27B42Xgr" resolve="columnCell" />
+                </node>
+                <node concept="1EpGR1" id="4V8pUeqNMDE" role="1EpG3j">
+                  <ref role="1EpG3m" node="1_y16CGAXlk" resolve="Author" />
+                </node>
+                <node concept="1EpGR1" id="4V8pUeqNMDF" role="1EpG3j">
+                  <ref role="1EpG3m" node="1_y16CGAXlq" resolve="Title" />
+                </node>
+                <node concept="1EpGR1" id="4V8pUeqNMDG" role="1EpG3j">
+                  <ref role="1EpG3m" node="1_y16CGAXm0" resolve="Year" />
+                </node>
+                <node concept="1EpGR1" id="4V8pUeqNMDH" role="1EpG3j">
+                  <ref role="1EpG3m" node="1_y16CGAXmd" resolve="Rank" />
+                </node>
+                <node concept="1EpGR1" id="4V8pUeqNMDI" role="1EpG3j">
+                  <ref role="1EpG3m" node="1_y16CGAXmq" resolve="ReadStatus" />
+                </node>
+                <node concept="1EpGR1" id="4V8pUeqNMDJ" role="1EpG3j">
+                  <ref role="1EpG3m" node="1_y16CGAXmB" resolve="Priority" />
+                </node>
+                <node concept="3UOqEq" id="4V8pUeqNMDK" role="2ay43_">
+                  <node concept="1NuoHz" id="4V8pUeqNMDL" role="2aBVWM">
+                    <ref role="3elmOO" node="4Ew27B42Xgx" resolve="columnCell" />
+                    <node concept="V3Zc6" id="4V8pUeqNMDM" role="1NuoHy">
+                      <node concept="V3Zdv" id="4V8pUeqNMDN" role="V3Zc7">
+                        <node concept="o7Kjd" id="4V8pUeqNMDO" role="oSbKM">
+                          <property role="o7K7r" value="InCollection" />
+                        </node>
+                      </node>
+                    </node>
+                  </node>
+                  <node concept="1NuoHz" id="4V8pUeqNMDP" role="2aBVWM">
+                    <ref role="3elmOO" node="1_y16CGAXlw" resolve="Author" />
+                    <node concept="V3Zc6" id="4V8pUeqNMDQ" role="1NuoHy">
+                      <node concept="V3Zdv" id="4V8pUeqNMDR" role="V3Zc7">
+                        <node concept="o7Kjd" id="4V8pUeqNMDS" role="oSbKM">
+                          <property role="o7K7r" value="Author1" />
+                        </node>
+                      </node>
+                    </node>
+                  </node>
+                  <node concept="1NuoHz" id="4V8pUeqNMDT" role="2aBVWM">
+                    <ref role="3elmOO" node="1_y16CGAXlK" resolve="Title" />
+                    <node concept="V3Zc6" id="4V8pUeqNMDU" role="1NuoHy">
+                      <node concept="V3Zdv" id="4V8pUeqNMDV" role="V3Zc7">
+                        <node concept="o7Kjd" id="4V8pUeqNMDW" role="oSbKM">
+                          <property role="o7K7r" value="Title1" />
+                        </node>
+                      </node>
+                    </node>
+                  </node>
+                  <node concept="1NuoHz" id="4V8pUeqNMDX" role="2aBVWM">
+                    <ref role="3elmOO" node="1_y16CGAXm5" resolve="Year" />
+                    <node concept="V3Zc6" id="4V8pUeqNMDY" role="1NuoHy">
+                      <node concept="V3Zdv" id="4V8pUeqNMDZ" role="V3Zc7">
+                        <node concept="o7Kjd" id="4V8pUeqNME0" role="oSbKM" />
+                      </node>
+                    </node>
+                  </node>
+                  <node concept="1NuoHz" id="4V8pUeqNME1" role="2aBVWM">
+                    <ref role="3elmOO" node="3uaVgiEKLzj" resolve="Rank" />
+                    <node concept="2mJbJ5" id="4V8pUeqNME2" role="1NuoHy">
+                      <node concept="2mJbG1" id="4V8pUeqNME3" role="2mJbJ6">
+                        <node concept="3eDL7N" id="4V8pUeqNME4" role="3n32fm">
+                          <ref role="3eDL7M" node="3uaVgiEKLxM" resolve="RANK3" />
+                        </node>
+                      </node>
+                    </node>
+                  </node>
+                  <node concept="1NuoHz" id="4V8pUeqNME5" role="2aBVWM">
+                    <ref role="3elmOO" node="3uaVgiEKLyA" resolve="ReadStatus" />
+                    <node concept="2mJbJ5" id="4V8pUeqNME6" role="1NuoHy">
+                      <node concept="2mJbG1" id="4V8pUeqNME7" role="2mJbJ6">
+                        <node concept="3eDL7N" id="4V8pUeqNME8" role="3n32fm">
+                          <ref role="3eDL7M" node="3uaVgiEKLxS" resolve="READ_STATUS_SKIMMED" />
+                        </node>
+                      </node>
+                    </node>
+                  </node>
+                  <node concept="1NuoHz" id="4V8pUeqNME9" role="2aBVWM">
+                    <ref role="3elmOO" node="3uaVgiEKLxT" resolve="Priority" />
+                    <node concept="2mJbJ5" id="4V8pUeqNMEa" role="1NuoHy">
+                      <node concept="2mJbG1" id="4V8pUeqNMEb" role="2mJbJ6">
+                        <node concept="3eDL7N" id="4V8pUeqNMEc" role="3n32fm">
+                          <ref role="3eDL7M" node="3uaVgiEKLxI" resolve="PRIORITY_MEDIUM" />
+                        </node>
+                      </node>
+                    </node>
+                  </node>
+                </node>
+                <node concept="3UOqEq" id="4V8pUeqNMEs" role="2ay43_">
+                  <node concept="1NuoHz" id="4V8pUeqNMEw" role="2aBVWM">
+                    <ref role="3elmOO" node="4Ew27B42Xgx" resolve="columnCell" />
+                    <node concept="V3Zc6" id="4V8pUeqNMEt" role="1NuoHy">
+                      <node concept="V3Zdv" id="4V8pUeqNMEu" role="V3Zc7">
+                        <node concept="o7Kjd" id="4V8pUeqNMEv" role="oSbKM">
+                          <property role="o7K7r" value="Book" />
+                        </node>
+                      </node>
+                    </node>
+                  </node>
+                  <node concept="1NuoHz" id="4V8pUeqNME_" role="2aBVWM">
+                    <ref role="3elmOO" node="1_y16CGAXlw" resolve="Author" />
+                    <node concept="V3Zc6" id="4V8pUeqNMEy" role="1NuoHy">
+                      <node concept="V3Zdv" id="4V8pUeqNMEz" role="V3Zc7">
+                        <node concept="o7Kjd" id="4V8pUeqNME$" role="oSbKM">
+                          <property role="o7K7r" value="Author2" />
+                        </node>
+                      </node>
+                    </node>
+                  </node>
+                  <node concept="1NuoHz" id="4V8pUeqNMEE" role="2aBVWM">
+                    <ref role="3elmOO" node="1_y16CGAXlK" resolve="Title" />
+                    <node concept="V3Zc6" id="4V8pUeqNMEB" role="1NuoHy">
+                      <node concept="V3Zdv" id="4V8pUeqNMEC" role="V3Zc7">
+                        <node concept="o7Kjd" id="4V8pUeqNMED" role="oSbKM">
+                          <property role="o7K7r" value="Title2" />
+                        </node>
+                      </node>
+                    </node>
+                  </node>
+                  <node concept="1NuoHz" id="4V8pUeqNMEJ" role="2aBVWM">
+                    <ref role="3elmOO" node="1_y16CGAXm5" resolve="Year" />
+                    <node concept="V3Zc6" id="4V8pUeqNMEG" role="1NuoHy">
+                      <node concept="V3Zdv" id="4V8pUeqNMEH" role="V3Zc7">
+                        <node concept="o7Kjd" id="4V8pUeqNMEI" role="oSbKM" />
+                      </node>
+                    </node>
+                  </node>
+                  <node concept="1NuoHz" id="4V8pUeqNMEO" role="2aBVWM">
+                    <ref role="3elmOO" node="3uaVgiEKLzj" resolve="Rank" />
+                    <node concept="2mJbJ5" id="4V8pUeqNMEL" role="1NuoHy">
+                      <node concept="2mJbG1" id="4V8pUeqNMEM" role="2mJbJ6">
+                        <node concept="3eDL7N" id="4V8pUeqNMEN" role="3n32fm">
+                          <ref role="3eDL7M" node="3uaVgiEKLxO" resolve="RANK5" />
+                        </node>
+                      </node>
+                    </node>
+                  </node>
+                  <node concept="1NuoHz" id="4V8pUeqNMET" role="2aBVWM">
+                    <ref role="3elmOO" node="3uaVgiEKLyA" resolve="ReadStatus" />
+                    <node concept="2mJbJ5" id="4V8pUeqNMEQ" role="1NuoHy">
+                      <node concept="2mJbG1" id="4V8pUeqNMER" role="2mJbJ6">
+                        <node concept="3eDL7N" id="4V8pUeqNMES" role="3n32fm" />
+                      </node>
+                    </node>
+                  </node>
+                  <node concept="1NuoHz" id="4V8pUeqNMEY" role="2aBVWM">
+                    <ref role="3elmOO" node="3uaVgiEKLxT" resolve="Priority" />
+                    <node concept="2mJbJ5" id="4V8pUeqNMEV" role="1NuoHy">
+                      <node concept="2mJbG1" id="4V8pUeqNMEW" role="2mJbJ6">
+                        <node concept="3eDL7N" id="4V8pUeqNMEX" role="3n32fm">
+                          <ref role="3eDL7M" node="3uaVgiEKLxJ" resolve="PRIORITY_LOW" />
+                        </node>
+                      </node>
+                    </node>
+                  </node>
+                </node>
+              </node>
+            </node>
+          </node>
+        </node>
+      </node>
+    </node>
+    <node concept="3LKzX3" id="4V8pUeqNMBD" role="30n1Qb">
+      <property role="TrG5h" value="Add Entry" />
+      <node concept="1IbZgy" id="4V8pUeqNMBE" role="DUd2K">
+        <node concept="8w7HN" id="4V8pUeqNMCw" role="DUiTU">
+          <ref role="8w7Kh" node="6xCODJVrQo0" resolve="articleFile" />
+        </node>
+      </node>
+      <node concept="1s$VFG" id="4V8pUeqNMBO" role="1s$QAY">
+        <node concept="DUd5q" id="4V8pUeqNMBP" role="1s$QAM">
+          <node concept="27s6xY" id="4V8pUeqNMBQ" role="DUiS9">
+            <ref role="27sXQn" node="6xCODJVqSLm" resolve="LoadView" />
+          </node>
+        </node>
+        <node concept="DUd5q" id="4V8pUeqNMCy" role="1s$QAM">
+          <node concept="3eaLt3" id="4V8pUeqNMC$" role="DUiS9">
+            <ref role="3ucQsQ" node="4Ew27B42Xge" resolve="AddEntry" />
+          </node>
+        </node>
+        <node concept="DUd2R" id="4V8pUeqNMBR" role="1s$QAX">
+          <node concept="30nzp_" id="4V8pUeqNMBS" role="DUiSb">
+            <ref role="30nzpS" node="4Ew27B42Xgq" resolve="Entries" />
+            <node concept="3UVeCy" id="4V8pUeqNMBT" role="30nDbQ">
+              <node concept="2ayrQO" id="4V8pUeqNMBU" role="3UVeCz">
+                <node concept="1EpGR1" id="4V8pUeqNMBV" role="1EpG3j">
+                  <ref role="1EpG3m" node="4Ew27B42Xgr" resolve="columnCell" />
+                </node>
+                <node concept="1EpGR1" id="4V8pUeqNMBW" role="1EpG3j">
+                  <ref role="1EpG3m" node="1_y16CGAXlk" resolve="Author" />
+                </node>
+                <node concept="1EpGR1" id="4V8pUeqNMBX" role="1EpG3j">
+                  <ref role="1EpG3m" node="1_y16CGAXlq" resolve="Title" />
+                </node>
+                <node concept="1EpGR1" id="4V8pUeqNMBY" role="1EpG3j">
+                  <ref role="1EpG3m" node="1_y16CGAXm0" resolve="Year" />
+                </node>
+                <node concept="1EpGR1" id="4V8pUeqNMBZ" role="1EpG3j">
+                  <ref role="1EpG3m" node="1_y16CGAXmd" resolve="Rank" />
+                </node>
+                <node concept="1EpGR1" id="4V8pUeqNMC0" role="1EpG3j">
+                  <ref role="1EpG3m" node="1_y16CGAXmq" resolve="ReadStatus" />
+                </node>
+                <node concept="1EpGR1" id="4V8pUeqNMC1" role="1EpG3j">
+                  <ref role="1EpG3m" node="1_y16CGAXmB" resolve="Priority" />
+                </node>
+                <node concept="3UOqEq" id="4V8pUeqNMC2" role="2ay43_">
+                  <node concept="1NuoHz" id="4V8pUeqNMC3" role="2aBVWM">
+                    <ref role="3elmOO" node="4Ew27B42Xgx" resolve="columnCell" />
+                    <node concept="V3Zc6" id="4V8pUeqNMC4" role="1NuoHy">
+                      <node concept="V3Zdv" id="4V8pUeqNMC5" role="V3Zc7">
+                        <node concept="o7Kjd" id="4V8pUeqNMC6" role="oSbKM">
+                          <property role="o7K7r" value="Article" />
+                        </node>
+                      </node>
+                    </node>
+                  </node>
+                  <node concept="1NuoHz" id="4V8pUeqNMC7" role="2aBVWM">
+                    <ref role="3elmOO" node="1_y16CGAXlw" resolve="Author" />
+                    <node concept="V3Zc6" id="4V8pUeqNMC8" role="1NuoHy">
+                      <node concept="V3Zdv" id="4V8pUeqNMC9" role="V3Zc7">
+                        <node concept="o7Kjd" id="4V8pUeqNMCa" role="oSbKM">
+                          <property role="o7K7r" value="My Author" />
+                        </node>
+                      </node>
+                    </node>
+                  </node>
+                  <node concept="1NuoHz" id="4V8pUeqNMCb" role="2aBVWM">
+                    <ref role="3elmOO" node="1_y16CGAXlK" resolve="Title" />
+                    <node concept="V3Zc6" id="4V8pUeqNMCc" role="1NuoHy">
+                      <node concept="V3Zdv" id="4V8pUeqNMCd" role="V3Zc7">
+                        <node concept="o7Kjd" id="4V8pUeqNMCe" role="oSbKM">
+                          <property role="o7K7r" value="My Title" />
+                        </node>
+                      </node>
+                    </node>
+                  </node>
+                  <node concept="1NuoHz" id="4V8pUeqNMCf" role="2aBVWM">
+                    <ref role="3elmOO" node="1_y16CGAXm5" resolve="Year" />
+                    <node concept="V3Zc6" id="4V8pUeqNMCg" role="1NuoHy">
+                      <node concept="V3Zdv" id="4V8pUeqNMCh" role="V3Zc7">
+                        <node concept="o7Kjd" id="4V8pUeqNMCi" role="oSbKM">
+                          <property role="o7K7r" value="2025" />
+                        </node>
+                      </node>
+                    </node>
+                  </node>
+                  <node concept="1NuoHz" id="4V8pUeqNMCj" role="2aBVWM">
+                    <ref role="3elmOO" node="3uaVgiEKLzj" resolve="Rank" />
+                    <node concept="2mJbJ5" id="4V8pUeqNMCk" role="1NuoHy">
+                      <node concept="2mJbG1" id="4V8pUeqNMCl" role="2mJbJ6">
+                        <node concept="3eDL7N" id="4V8pUeqNMCm" role="3n32fm">
+                          <ref role="3eDL7M" node="3uaVgiEKLxK" resolve="RANK1" />
+                        </node>
+                      </node>
+                    </node>
+                  </node>
+                  <node concept="1NuoHz" id="4V8pUeqNMCn" role="2aBVWM">
+                    <ref role="3elmOO" node="3uaVgiEKLyA" resolve="ReadStatus" />
+                    <node concept="2mJbJ5" id="4V8pUeqNMCo" role="1NuoHy">
+                      <node concept="2mJbG1" id="4V8pUeqNMCp" role="2mJbJ6">
+                        <node concept="3eDL7N" id="4V8pUeqNMCq" role="3n32fm">
+                          <ref role="3eDL7M" node="3uaVgiEKLxR" resolve="READ_STATUS_READ" />
+                        </node>
+                      </node>
+                    </node>
+                  </node>
+                  <node concept="1NuoHz" id="4V8pUeqNMCr" role="2aBVWM">
+                    <ref role="3elmOO" node="3uaVgiEKLxT" resolve="Priority" />
+                    <node concept="2mJbJ5" id="4V8pUeqNMCs" role="1NuoHy">
+                      <node concept="2mJbG1" id="4V8pUeqNMCt" role="2mJbJ6">
+                        <node concept="3eDL7N" id="4V8pUeqNMCu" role="3n32fm">
+                          <ref role="3eDL7M" node="3uaVgiEKLxG" resolve="PRIORITY_HIGH" />
+                        </node>
+                      </node>
+                    </node>
+                  </node>
+                </node>
+                <node concept="3UOqEq" id="4V8pUeqNMC_" role="2ay43_">
+                  <node concept="1NuoHz" id="4V8pUeqNMCD" role="2aBVWM">
+                    <ref role="3elmOO" node="4Ew27B42Xgx" resolve="columnCell" />
+                    <node concept="V3Zc6" id="4V8pUeqNMCA" role="1NuoHy">
+                      <node concept="V3Zdv" id="4V8pUeqNMCB" role="V3Zc7">
+                        <node concept="o7Kjd" id="4V8pUeqNMCC" role="oSbKM" />
+                      </node>
+                    </node>
+                  </node>
+                  <node concept="1NuoHz" id="4V8pUeqNMCI" role="2aBVWM">
+                    <ref role="3elmOO" node="1_y16CGAXlw" resolve="Author" />
+                    <node concept="V3Zc6" id="4V8pUeqNMCF" role="1NuoHy">
+                      <node concept="V3Zdv" id="4V8pUeqNMCG" role="V3Zc7">
+                        <node concept="o7Kjd" id="4V8pUeqNMCH" role="oSbKM" />
+                      </node>
+                    </node>
+                  </node>
+                  <node concept="1NuoHz" id="4V8pUeqNMCN" role="2aBVWM">
+                    <ref role="3elmOO" node="1_y16CGAXlK" resolve="Title" />
+                    <node concept="V3Zc6" id="4V8pUeqNMCK" role="1NuoHy">
+                      <node concept="V3Zdv" id="4V8pUeqNMCL" role="V3Zc7">
+                        <node concept="o7Kjd" id="4V8pUeqNMCM" role="oSbKM" />
+                      </node>
+                    </node>
+                  </node>
+                  <node concept="1NuoHz" id="4V8pUeqNMCS" role="2aBVWM">
+                    <ref role="3elmOO" node="1_y16CGAXm5" resolve="Year" />
+                    <node concept="V3Zc6" id="4V8pUeqNMCP" role="1NuoHy">
+                      <node concept="V3Zdv" id="4V8pUeqNMCQ" role="V3Zc7">
+                        <node concept="o7Kjd" id="4V8pUeqNMCR" role="oSbKM" />
+                      </node>
+                    </node>
+                  </node>
+                  <node concept="1NuoHz" id="4V8pUeqNMCX" role="2aBVWM">
+                    <ref role="3elmOO" node="3uaVgiEKLzj" resolve="Rank" />
+                    <node concept="2mJbJ5" id="4V8pUeqNMCU" role="1NuoHy">
+                      <node concept="2mJbG1" id="4V8pUeqNMCV" role="2mJbJ6">
+                        <node concept="3eDL7N" id="4V8pUeqNMCW" role="3n32fm">
+                          <ref role="3eDL7M" node="3uaVgiEKLxK" resolve="RANK1" />
+                        </node>
+                      </node>
+                    </node>
+                  </node>
+                  <node concept="1NuoHz" id="4V8pUeqNMD2" role="2aBVWM">
+                    <ref role="3elmOO" node="3uaVgiEKLyA" resolve="ReadStatus" />
+                    <node concept="2mJbJ5" id="4V8pUeqNMCZ" role="1NuoHy">
+                      <node concept="2mJbG1" id="4V8pUeqNMD0" role="2mJbJ6">
+                        <node concept="3eDL7N" id="4V8pUeqNMD1" role="3n32fm" />
+                      </node>
+                    </node>
+                  </node>
+                  <node concept="1NuoHz" id="4V8pUeqNMD7" role="2aBVWM">
+                    <ref role="3elmOO" node="3uaVgiEKLxT" resolve="Priority" />
+                    <node concept="2mJbJ5" id="4V8pUeqNMD4" role="1NuoHy">
+                      <node concept="2mJbG1" id="4V8pUeqNMD5" role="2mJbJ6">
+                        <node concept="3eDL7N" id="4V8pUeqNMD6" role="3n32fm">
+                          <ref role="3eDL7M" node="3uaVgiEKLxI" resolve="PRIORITY_MEDIUM" />
                         </node>
                       </node>
                     </node>
