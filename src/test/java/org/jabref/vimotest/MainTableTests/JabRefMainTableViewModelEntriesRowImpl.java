@@ -42,7 +42,10 @@ public class JabRefMainTableViewModelEntriesRowImpl extends JabRefMainTableViewM
 
     @Override
     public String getReadStatusImageName() {
-        SpecialFieldValueViewModel specialFieldValueViewModel = wrapped.getSpecialField(SpecialField.READ_STATUS).getValue().get();
+        SpecialFieldValueViewModel specialFieldValueViewModel = wrapped.getSpecialField(SpecialField.READ_STATUS).getValue().orElse(null);
+        if (specialFieldValueViewModel == null) {
+            return "";
+        }
         return switch (specialFieldValueViewModel.getValue()) {
             case READ -> "READ_STATUS_READ";
             case SKIMMED -> "READ_STATUS_SKIMMED";
@@ -52,7 +55,11 @@ public class JabRefMainTableViewModelEntriesRowImpl extends JabRefMainTableViewM
 
     @Override
     public String getPriorityImageName() {
-        return switch (wrapped.getSpecialField(SpecialField.PRIORITY).getValue().get().getValue()) {
+        SpecialFieldValueViewModel specialFieldValueViewModel = wrapped.getSpecialField(SpecialField.PRIORITY).getValue().orElse(null);
+        if (specialFieldValueViewModel == null) {
+            return "";
+        }
+        return switch (specialFieldValueViewModel.getValue()) {
             case PRIORITY_HIGH -> "PRIORITY_HIGH";
             case PRIORITY_MEDIUM -> "PRIORITY_MEDIUM";
             case PRIORITY_LOW -> "PRIORITY_LOW";

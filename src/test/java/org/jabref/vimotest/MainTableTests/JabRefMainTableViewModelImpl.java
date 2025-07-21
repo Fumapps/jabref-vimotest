@@ -1,5 +1,6 @@
 package org.jabref.vimotest.MainTableTests;
 
+import com.airhacks.afterburner.injection.Injector;
 import javafx.beans.property.IntegerProperty;
 import javafx.beans.property.ListProperty;
 import javafx.collections.FXCollections;
@@ -10,6 +11,8 @@ import org.jabref.gui.maintable.MainTableDataModel;
 import org.jabref.gui.maintable.NameDisplayPreferences;
 import org.jabref.gui.preferences.GuiPreferences;
 import org.jabref.gui.preferences.JabRefGuiPreferences;
+import org.jabref.gui.undo.CountingUndoManager;
+import org.jabref.gui.util.DefaultDirectoryMonitor;
 import org.jabref.gui.util.OptionalObjectProperty;
 import org.jabref.logic.ai.AiService;
 import org.jabref.logic.citationkeypattern.CitationKeyPatternPreferences;
@@ -21,6 +24,7 @@ import org.jabref.model.entry.BibEntryTypesManager;
 import org.jabref.model.entry.types.StandardEntryType;
 import org.jabref.model.groups.GroupTreeNode;
 import org.jabref.model.search.query.SearchQuery;
+import org.jabref.model.util.DirectoryMonitor;
 import org.jabref.model.util.DummyFileUpdateMonitor;
 import org.jabref.model.util.FileUpdateMonitor;
 import org.mockito.Answers;
@@ -80,13 +84,16 @@ public class JabRefMainTableViewModelImpl extends JabRefMainTableViewModel {
     @Override
     public void addEntryClicked() {
         DialogService dialogService = Mockito.mock(DialogService.class);
-        GuiPreferences preferences = Mockito.mock(GuiPreferences.class);
+        GuiPreferences preferences = JabRefGuiPreferences.createNew();
         StateManager stateManager = Mockito.mock(StateManager.class);
         CurrentThreadTaskExecutor taskExecutor = new CurrentThreadTaskExecutor();
 
+        DirectoryMonitor directoryMonitor = new DefaultDirectoryMonitor();
+        Injector.setModelOrService(DirectoryMonitor.class, directoryMonitor);
+
         LibraryTab libraryTab = LibraryTab.createLibraryTab(context, Mockito.mock(LibraryTabContainer.class),
                 dialogService, Mockito.mock(AiService.class), preferences, stateManager, Mockito.mock(FileUpdateMonitor.class),
-                Mockito.mock(BibEntryTypesManager.class), Mockito.mock(UndoManager.class), Mockito.mock(ClipBoardManager.class),
+                Mockito.mock(BibEntryTypesManager.class), Mockito.mock(CountingUndoManager.class), Mockito.mock(ClipBoardManager.class),
                 taskExecutor);
         new NewEntryAction(() -> libraryTab, StandardEntryType.Article, dialogService, preferences, stateManager)
                 .execute();

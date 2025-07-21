@@ -10,13 +10,29 @@ import org.junit.jupiter.api.Assertions;
 public class JabRefMainTableViewModelTests_Test {
   private JabRefMainTableViewModel sut;
   private JabRefMainTableViewModelTestSetup testSetup;
-  private String file = "@Article{MyArticle,\n  author={My Author},\n  title={My Title},\n  year={2025},\n  ranking={rank1},\n  readstatus={read},\n  priority={prio1}\n}";
+  private String articleFile = "@Article{MyArticle,\n  author={My Author},\n  title={My Title},\n  year={2025},\n  ranking={rank1},\n  readstatus={read},\n  priority={prio1}\n}";
+  private String twoEntries = "@InCollection{Entry1,\n  author={Author1},\n  title={Title1},\n  ranking={rank3},\n  readstatus={skimmed},\n  priority={prio2}\n}\n@Book{Entry1,\n  author={Author2},\n  title={Title2},\n  ranking={rank5},\n  priority={prio3}\n}";
   @Test
-  public void test_Default_given_file_when_LoadView_then_Entries_has_1_rows() throws Exception {
-    this.given_file();
+  public void test_Default_given_articleFile_when_LoadView_then_Entries_has_1_rows() throws Exception {
+    this.given_articleFile();
     this.BuildSut();
     this.when_LoadView();
     this.then_Entries_has_1_rows();
+  }
+  @Test
+  public void test_Two_Entries_given_twoEntries_when_LoadView_then_Entries_has_2_rows() throws Exception {
+    this.given_twoEntries();
+    this.BuildSut();
+    this.when_LoadView();
+    this.then_Entries_has_2_rows();
+  }
+  @Test
+  public void test_Add_Entry_given_articleFile_when_LoadView_and_click_AddEntry_then_Entries_has_2_rows() throws Exception {
+    this.given_articleFile_1();
+    this.BuildSut();
+    this.when_LoadView();
+    this.when_click_AddEntry();
+    this.then_Entries_has_2_rows_1();
   }
   @BeforeEach
   public void setUp() {
@@ -32,13 +48,22 @@ public class JabRefMainTableViewModelTests_Test {
 
 
 
-  public void given_file() {
-    this.testSetup.SetBibFileTestContext(this.file);
+  public void given_articleFile() {
+    this.testSetup.SetBibFileTestContext(this.articleFile);
+  }
+  public void given_twoEntries() {
+    this.testSetup.SetBibFileTestContext(this.twoEntries);
+  }
+  public void given_articleFile_1() {
+    this.testSetup.SetBibFileTestContext(this.articleFile);
   }
 
 
   public void when_LoadView() {
     this.sut.loadView();
+  }
+  public void when_click_AddEntry() {
+    this.sut.addEntryClicked();
   }
 
 
@@ -54,6 +79,54 @@ public class JabRefMainTableViewModelTests_Test {
     Assertions.assertEquals("RANK1", row0.getRankImageName());
     Assertions.assertEquals("READ_STATUS_READ", row0.getReadStatusImageName());
     Assertions.assertEquals("PRIORITY_HIGH", row0.getPriorityImageName());
+    // }
+  }
+  public void then_Entries_has_2_rows() {
+    List<JabRefMainTableViewModelEntriesRow> actualRows = this.sut.getEntriesTableRows();
+    Assertions.assertEquals(2, actualRows.size());
+    // {
+    JabRefMainTableViewModelEntriesRow row0 = actualRows.get(1 - 1);
+    Assertions.assertEquals("InCollection", row0.getColumnCellLabelText());
+    Assertions.assertEquals("Author1", row0.getAuthorLabelText());
+    Assertions.assertEquals("Title1", row0.getTitleLabelText());
+    Assertions.assertEquals("", row0.getYearLabelText());
+    Assertions.assertEquals("RANK3", row0.getRankImageName());
+    Assertions.assertEquals("READ_STATUS_SKIMMED", row0.getReadStatusImageName());
+    Assertions.assertEquals("PRIORITY_MEDIUM", row0.getPriorityImageName());
+    // }
+    // {
+    JabRefMainTableViewModelEntriesRow row1 = actualRows.get(2 - 1);
+    Assertions.assertEquals("Book", row1.getColumnCellLabelText());
+    Assertions.assertEquals("Author2", row1.getAuthorLabelText());
+    Assertions.assertEquals("Title2", row1.getTitleLabelText());
+    Assertions.assertEquals("", row1.getYearLabelText());
+    Assertions.assertEquals("RANK5", row1.getRankImageName());
+    Assertions.assertEquals("", row1.getReadStatusImageName());
+    Assertions.assertEquals("PRIORITY_LOW", row1.getPriorityImageName());
+    // }
+  }
+  public void then_Entries_has_2_rows_1() {
+    List<JabRefMainTableViewModelEntriesRow> actualRows = this.sut.getEntriesTableRows();
+    Assertions.assertEquals(2, actualRows.size());
+    // {
+    JabRefMainTableViewModelEntriesRow row0 = actualRows.get(1 - 1);
+    Assertions.assertEquals("Article", row0.getColumnCellLabelText());
+    Assertions.assertEquals("My Author", row0.getAuthorLabelText());
+    Assertions.assertEquals("My Title", row0.getTitleLabelText());
+    Assertions.assertEquals("2025", row0.getYearLabelText());
+    Assertions.assertEquals("RANK1", row0.getRankImageName());
+    Assertions.assertEquals("READ_STATUS_READ", row0.getReadStatusImageName());
+    Assertions.assertEquals("PRIORITY_HIGH", row0.getPriorityImageName());
+    // }
+    // {
+    JabRefMainTableViewModelEntriesRow row1 = actualRows.get(2 - 1);
+    Assertions.assertEquals("", row1.getColumnCellLabelText());
+    Assertions.assertEquals("", row1.getAuthorLabelText());
+    Assertions.assertEquals("", row1.getTitleLabelText());
+    Assertions.assertEquals("", row1.getYearLabelText());
+    Assertions.assertEquals("RANK1", row1.getRankImageName());
+    Assertions.assertEquals("", row1.getReadStatusImageName());
+    Assertions.assertEquals("PRIORITY_MEDIUM", row1.getPriorityImageName());
     // }
   }
 }
