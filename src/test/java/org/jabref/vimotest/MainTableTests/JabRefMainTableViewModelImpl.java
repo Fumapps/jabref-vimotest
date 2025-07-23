@@ -1,36 +1,28 @@
 package org.jabref.vimotest.MainTableTests;
 
-import com.airhacks.afterburner.injection.Injector;
 import javafx.beans.property.IntegerProperty;
 import javafx.beans.property.ListProperty;
 import javafx.collections.FXCollections;
-import org.jabref.gui.*;
-import org.jabref.gui.importer.NewEntryAction;
+import org.jabref.gui.DialogService;
+import org.jabref.gui.StateManager;
+import org.jabref.gui.externalfiles.ImportHandler;
 import org.jabref.gui.maintable.MainTableDataModel;
 import org.jabref.gui.preferences.GuiPreferences;
 import org.jabref.gui.preferences.JabRefGuiPreferences;
-import org.jabref.gui.theme.ThemeManager;
 import org.jabref.gui.undo.CountingUndoManager;
-import org.jabref.gui.util.DefaultDirectoryMonitor;
 import org.jabref.gui.util.OptionalObjectProperty;
-import org.jabref.logic.ai.AiService;
 import org.jabref.logic.citationkeypattern.CitationKeyPatternPreferences;
 import org.jabref.logic.importer.*;
-import org.jabref.logic.preferences.CliPreferences;
 import org.jabref.logic.util.CurrentThreadTaskExecutor;
-import org.jabref.logic.util.WebViewStore;
 import org.jabref.model.database.BibDatabaseContext;
-import org.jabref.model.entry.BibEntryTypesManager;
-import org.jabref.model.entry.types.StandardEntryType;
+import org.jabref.model.entry.BibEntry;
 import org.jabref.model.groups.GroupTreeNode;
-import org.jabref.model.search.query.SearchQuery;
-import org.jabref.model.util.DirectoryMonitor;
 import org.jabref.model.util.DummyFileUpdateMonitor;
 import org.jabref.model.util.FileUpdateMonitor;
 import org.mockito.Answers;
 import org.mockito.Mockito;
 
-import javax.swing.undo.UndoManager;
+import java.util.Arrays;
 import java.util.List;
 
 import static org.mockito.Mockito.mock;
@@ -82,25 +74,22 @@ public class JabRefMainTableViewModelImpl extends JabRefMainTableViewModel {
 
     @Override
     public void addEntryClicked() {
+        CurrentThreadTaskExecutor taskExecutor = new CurrentThreadTaskExecutor();
+
         DialogService dialogService = Mockito.mock(DialogService.class);
         GuiPreferences preferences = JabRefGuiPreferences.createNew();
-        StateManager stateManager = Mockito.mock(StateManager.class);
-        CurrentThreadTaskExecutor taskExecutor = new CurrentThreadTaskExecutor();
+        StateManager stateManager = new StateManager();
         CountingUndoManager undoManager = mock(CountingUndoManager.class);
-        ClipBoardManager clipBoardManager = mock(ClipBoardManager.class);
+        FileUpdateMonitor fileUpdateMonitor = mock(FileUpdateMonitor.class);
 
-        Injector.setModelOrService(DirectoryMonitor.class, new DefaultDirectoryMonitor());
-        Injector.setModelOrService(CliPreferences.class, preferences);
-        Injector.setModelOrService(UndoManager.class, undoManager);
-        Injector.setModelOrService(ThemeManager.class, Mockito.mock(ThemeManager.class));
-        Injector.setModelOrService(ClipBoardManager.class, clipBoardManager);
-        WebViewStore.init();
-
-        LibraryTab libraryTab = LibraryTab.createLibraryTab(context, Mockito.mock(LibraryTabContainer.class),
-                dialogService, Mockito.mock(AiService.class), preferences, stateManager, Mockito.mock(FileUpdateMonitor.class),
-                Mockito.mock(BibEntryTypesManager.class), undoManager, clipBoardManager,
+        var importHandler = new ImportHandler(
+                context,
+                preferences,
+                fileUpdateMonitor,
+                undoManager,
+                stateManager,
+                dialogService,
                 taskExecutor);
-        new NewEntryAction(() -> libraryTab, StandardEntryType.Article, dialogService, preferences, stateManager)
-                .execute();
+        importHandler.importCleanedEntries(Arrays.asList(new BibEntry()));
     }
 }
