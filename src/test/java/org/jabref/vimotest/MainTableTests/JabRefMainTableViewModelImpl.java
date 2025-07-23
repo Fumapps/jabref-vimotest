@@ -5,20 +5,20 @@ import javafx.beans.property.IntegerProperty;
 import javafx.beans.property.ListProperty;
 import javafx.collections.FXCollections;
 import org.jabref.gui.*;
-import org.jabref.gui.groups.GroupsPreferences;
 import org.jabref.gui.importer.NewEntryAction;
 import org.jabref.gui.maintable.MainTableDataModel;
-import org.jabref.gui.maintable.NameDisplayPreferences;
 import org.jabref.gui.preferences.GuiPreferences;
 import org.jabref.gui.preferences.JabRefGuiPreferences;
+import org.jabref.gui.theme.ThemeManager;
 import org.jabref.gui.undo.CountingUndoManager;
 import org.jabref.gui.util.DefaultDirectoryMonitor;
 import org.jabref.gui.util.OptionalObjectProperty;
 import org.jabref.logic.ai.AiService;
 import org.jabref.logic.citationkeypattern.CitationKeyPatternPreferences;
 import org.jabref.logic.importer.*;
-import org.jabref.logic.search.SearchPreferences;
+import org.jabref.logic.preferences.CliPreferences;
 import org.jabref.logic.util.CurrentThreadTaskExecutor;
+import org.jabref.logic.util.WebViewStore;
 import org.jabref.model.database.BibDatabaseContext;
 import org.jabref.model.entry.BibEntryTypesManager;
 import org.jabref.model.entry.types.StandardEntryType;
@@ -52,11 +52,10 @@ public class JabRefMainTableViewModelImpl extends JabRefMainTableViewModel {
         CurrentThreadTaskExecutor taskExecutor = new CurrentThreadTaskExecutor();
         GuiPreferences preferences = JabRefGuiPreferences.createNew();
         ListProperty<GroupTreeNode> groupTreeNodes = Mockito.mock(ListProperty.class);
-        OptionalObjectProperty<SearchQuery> searchQuery = Mockito.mock(OptionalObjectProperty.class);
         IntegerProperty resultSizeProperty = Mockito.mock(IntegerProperty.class);
 
         wrappedDataModel = new MainTableDataModel(context, preferences, taskExecutor,
-                null, groupTreeNodes, searchQuery, resultSizeProperty);
+                null, groupTreeNodes, OptionalObjectProperty.empty(), resultSizeProperty);
 
     }
 
@@ -87,13 +86,19 @@ public class JabRefMainTableViewModelImpl extends JabRefMainTableViewModel {
         GuiPreferences preferences = JabRefGuiPreferences.createNew();
         StateManager stateManager = Mockito.mock(StateManager.class);
         CurrentThreadTaskExecutor taskExecutor = new CurrentThreadTaskExecutor();
+        CountingUndoManager undoManager = mock(CountingUndoManager.class);
+        ClipBoardManager clipBoardManager = mock(ClipBoardManager.class);
 
-        DirectoryMonitor directoryMonitor = new DefaultDirectoryMonitor();
-        Injector.setModelOrService(DirectoryMonitor.class, directoryMonitor);
+        Injector.setModelOrService(DirectoryMonitor.class, new DefaultDirectoryMonitor());
+        Injector.setModelOrService(CliPreferences.class, preferences);
+        Injector.setModelOrService(UndoManager.class, undoManager);
+        Injector.setModelOrService(ThemeManager.class, Mockito.mock(ThemeManager.class));
+        Injector.setModelOrService(ClipBoardManager.class, clipBoardManager);
+        WebViewStore.init();
 
         LibraryTab libraryTab = LibraryTab.createLibraryTab(context, Mockito.mock(LibraryTabContainer.class),
                 dialogService, Mockito.mock(AiService.class), preferences, stateManager, Mockito.mock(FileUpdateMonitor.class),
-                Mockito.mock(BibEntryTypesManager.class), Mockito.mock(CountingUndoManager.class), Mockito.mock(ClipBoardManager.class),
+                Mockito.mock(BibEntryTypesManager.class), undoManager, clipBoardManager,
                 taskExecutor);
         new NewEntryAction(() -> libraryTab, StandardEntryType.Article, dialogService, preferences, stateManager)
                 .execute();
