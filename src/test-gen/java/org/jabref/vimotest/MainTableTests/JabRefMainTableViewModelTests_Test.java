@@ -120,13 +120,13 @@ public class JabRefMainTableViewModelTests_Test extends org.testfx.framework.jun
     // }
     // {
     JabRefMainTableViewModelEntriesRow row1 = actualRows.get(2 - 1);
-    Assertions.assertEquals("", row1.getColumnCellLabelText());
+    Assertions.assertEquals("Misc", row1.getColumnCellLabelText());
     Assertions.assertEquals("", row1.getAuthorLabelText());
     Assertions.assertEquals("", row1.getTitleLabelText());
     Assertions.assertEquals("", row1.getYearLabelText());
-    Assertions.assertEquals("RANK1", row1.getRankImageName());
+    Assertions.assertEquals("", row1.getRankImageName());
     Assertions.assertEquals("", row1.getReadStatusImageName());
-    Assertions.assertEquals("PRIORITY_MEDIUM", row1.getPriorityImageName());
+    Assertions.assertEquals("", row1.getPriorityImageName());
     // }
   }
 }

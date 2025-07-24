@@ -36,7 +36,10 @@ public class JabRefMainTableViewModelEntriesRowImpl extends JabRefMainTableViewM
 
     @Override
     public String getRankImageName() {
-        SpecialFieldValueViewModel specialFieldValueViewModel = wrapped.getSpecialField(SpecialField.RANKING).getValue().get();
+        SpecialFieldValueViewModel specialFieldValueViewModel = wrapped.getSpecialField(SpecialField.RANKING).getValue().orElse(null);
+        if (specialFieldValueViewModel == null) {
+            return "";
+        }
         return "RANK" + specialFieldValueViewModel.getValue().toRating();
     }
 
