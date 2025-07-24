@@ -7,7 +7,7 @@ import org.junit.jupiter.api.BeforeEach;
 import java.util.List;
 import org.junit.jupiter.api.Assertions;
 
-public class JabRefMainTableViewModelTests_Test extends org.testfx.framework.junit5.ApplicationTest {
+public class JabRefMainTableViewModelTests_Test {
   private JabRefMainTableViewModel sut;
   private JabRefMainTableViewModelTestSetup testSetup;
   private String articleFile = "@Article{MyArticle,\n  author={My Author},\n  title={My Title},\n  year={2025},\n  ranking={rank1},\n  readstatus={read},\n  priority={prio1}\n}";
