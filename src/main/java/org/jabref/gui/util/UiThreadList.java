@@ -7,6 +7,7 @@ import javafx.collections.ListChangeListener;
 import javafx.collections.ObservableList;
 import javafx.collections.transformation.TransformationList;
 
+import org.jabref.gui.util.uithreadaware.UiThreadInvoke;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -23,7 +24,7 @@ class UiThreadList<T> extends TransformationList<T, T> {
             fireChange(change);
         } else {
             CountDownLatch latch = new CountDownLatch(1);
-            Platform.runLater(() -> {
+            UiThreadInvoke.run(() -> {
                 fireChange(change);
                 latch.countDown();
             });
