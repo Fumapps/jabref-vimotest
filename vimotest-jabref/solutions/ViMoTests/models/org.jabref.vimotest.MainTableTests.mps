@@ -207,6 +207,17 @@
         <node concept="C4FCh" id="4Ew27B42Xgl" role="2X2XNj" />
         <node concept="C4FCg" id="4Ew27B42Xgn" role="2X2XNc" />
       </node>
+      <node concept="2X2XNh" id="4M9b1ETXRuQ" role="103ZUC">
+        <property role="TrG5h" value="DeleteEntry" />
+        <node concept="3Vw88h" id="4M9b1ETXRuR" role="2X2XNd" />
+        <node concept="V3Zf6" id="4M9b1ETXRuS" role="2X2XNi">
+          <node concept="o7Kjd" id="4M9b1ETXRuT" role="o6p68">
+            <property role="o7K7r" value="Delete Entry" />
+          </node>
+        </node>
+        <node concept="C4FCh" id="4M9b1ETXRuU" role="2X2XNj" />
+        <node concept="C4FCg" id="4M9b1ETXRuV" role="2X2XNc" />
+      </node>
       <node concept="3UVeDL" id="4Ew27B42Xgq" role="103ZUC">
         <property role="TrG5h" value="Entries" />
         <node concept="E2vJn" id="4Ew27B42Xgr" role="E2v$k">
@@ -374,7 +385,7 @@
     </node>
   </node>
   <node concept="30n1Qd" id="6xCODJVrQnR">
-    <property role="TrG5h" value="JabRefMainTableViewModelTests" />
+    <property role="TrG5h" value="Load MainTable Tests" />
     <ref role="30n1PB" node="6xCODJVqSLk" resolve="JabRefMainTableViewModel" />
     <node concept="3LKzX3" id="6xCODJVrQnS" role="30n1Qb">
       <property role="TrG5h" value="Default" />
@@ -754,6 +765,128 @@
         </node>
       </node>
     </node>
+  </node>
+  <node concept="1u6Luu" id="1_y16CGAXmO">
+    <property role="TrG5h" value="JabRefImages" />
+    <node concept="28FJ0O" id="7LHyCtd50jW" role="28FJ0w">
+      <property role="TrG5h" value="Priority" />
+      <node concept="3eDL7N" id="7LHyCtd50jX" role="28FJ0D">
+        <ref role="3eDL7M" node="3uaVgiEKLxJ" resolve="PRIORITY_LOW" />
+      </node>
+      <node concept="3eDL7N" id="7LHyCtd50jY" role="28FJ0D">
+        <ref role="3eDL7M" node="3uaVgiEKLxI" resolve="PRIORITY_MEDIUM" />
+      </node>
+      <node concept="3eDL7N" id="7LHyCtd50jZ" role="28FJ0D">
+        <ref role="3eDL7M" node="3uaVgiEKLxG" resolve="PRIORITY_HIGH" />
+      </node>
+    </node>
+    <node concept="28FJ0O" id="7LHyCtd50k3" role="28FJ0w">
+      <property role="TrG5h" value="Rank" />
+      <node concept="3eDL7N" id="7LHyCtd50k4" role="28FJ0D">
+        <ref role="3eDL7M" node="3uaVgiEKLxK" resolve="RANK1" />
+      </node>
+      <node concept="3eDL7N" id="7LHyCtd50k5" role="28FJ0D">
+        <ref role="3eDL7M" node="3uaVgiEKLxL" resolve="RANK2" />
+      </node>
+      <node concept="3eDL7N" id="7LHyCtd50k6" role="28FJ0D">
+        <ref role="3eDL7M" node="3uaVgiEKLxM" resolve="RANK3" />
+      </node>
+      <node concept="3eDL7N" id="7LHyCtd50k7" role="28FJ0D">
+        <ref role="3eDL7M" node="3uaVgiEKLxN" resolve="RANK4" />
+      </node>
+      <node concept="3eDL7N" id="7LHyCtd50k8" role="28FJ0D">
+        <ref role="3eDL7M" node="3uaVgiEKLxO" resolve="RANK5" />
+      </node>
+    </node>
+    <node concept="28FJ0O" id="7LHyCtd50ka" role="28FJ0w">
+      <property role="TrG5h" value="ReadStatus" />
+      <node concept="3eDL7N" id="7LHyCtd50kb" role="28FJ0D">
+        <ref role="3eDL7M" node="3uaVgiEKLxR" resolve="READ_STATUS_READ" />
+      </node>
+      <node concept="3eDL7N" id="7LHyCtd50kc" role="28FJ0D">
+        <ref role="3eDL7M" node="3uaVgiEKLxS" resolve="READ_STATUS_SKIMMED" />
+      </node>
+    </node>
+    <node concept="1u6Luv" id="1_y16CGAXmP" role="1u6Lvn">
+      <property role="TrG5h" value="PRIORITY" />
+      <property role="2mJlLi" value="../../icons/PRIORITY.png" />
+      <property role="Lsnro" value="16" />
+      <property role="LsnsT" value="16" />
+    </node>
+    <node concept="1u6Luv" id="3uaVgiEKLxG" role="1u6Lvn">
+      <property role="TrG5h" value="PRIORITY_HIGH" />
+      <property role="2mJlLi" value="../../icons/PRIORITY_HIGH.png" />
+      <property role="Lsnro" value="16" />
+      <property role="LsnsT" value="16" />
+    </node>
+    <node concept="1u6Luv" id="3uaVgiEKLxI" role="1u6Lvn">
+      <property role="TrG5h" value="PRIORITY_MEDIUM" />
+      <property role="2mJlLi" value="../../icons/PRIORITY_MEDIUM.png" />
+      <property role="Lsnro" value="16" />
+      <property role="LsnsT" value="16" />
+    </node>
+    <node concept="1u6Luv" id="3uaVgiEKLxJ" role="1u6Lvn">
+      <property role="TrG5h" value="PRIORITY_LOW" />
+      <property role="2mJlLi" value="../../icons/PRIORITY_LOW.png" />
+      <property role="Lsnro" value="16" />
+      <property role="LsnsT" value="16" />
+    </node>
+    <node concept="1u6Luv" id="3uaVgiEKLxK" role="1u6Lvn">
+      <property role="TrG5h" value="RANK1" />
+      <property role="2mJlLi" value="../../icons/RANK1.png" />
+      <property role="LsnsT" value="16" />
+    </node>
+    <node concept="1u6Luv" id="3uaVgiEKLxL" role="1u6Lvn">
+      <property role="TrG5h" value="RANK2" />
+      <property role="2mJlLi" value="../../icons/RANK2.png" />
+      <property role="LsnsT" value="16" />
+    </node>
+    <node concept="1u6Luv" id="3uaVgiEKLxM" role="1u6Lvn">
+      <property role="TrG5h" value="RANK3" />
+      <property role="2mJlLi" value="../../icons/RANK3.png" />
+      <property role="LsnsT" value="16" />
+    </node>
+    <node concept="1u6Luv" id="3uaVgiEKLxN" role="1u6Lvn">
+      <property role="TrG5h" value="RANK4" />
+      <property role="2mJlLi" value="../../icons/RANK4.png" />
+      <property role="LsnsT" value="16" />
+    </node>
+    <node concept="1u6Luv" id="3uaVgiEKLxO" role="1u6Lvn">
+      <property role="TrG5h" value="RANK5" />
+      <property role="2mJlLi" value="../../icons/RANK5.png" />
+      <property role="LsnsT" value="16" />
+    </node>
+    <node concept="1u6Luv" id="3uaVgiEKLxP" role="1u6Lvn">
+      <property role="TrG5h" value="RANKING" />
+      <property role="2mJlLi" value="../../icons/RANKING.png" />
+      <property role="Lsnro" value="16" />
+      <property role="LsnsT" value="16" />
+    </node>
+    <node concept="1u6Luv" id="3uaVgiEKLxQ" role="1u6Lvn">
+      <property role="TrG5h" value="READ_STATUS" />
+      <property role="2mJlLi" value="../../icons/READ_STATUS.png" />
+      <property role="LsnsT" value="16" />
+      <property role="Lsnro" value="16" />
+    </node>
+    <node concept="1u6Luv" id="3uaVgiEKLxR" role="1u6Lvn">
+      <property role="TrG5h" value="READ_STATUS_READ" />
+      <property role="2mJlLi" value="../../icons/READ_STATUS_READ.png" />
+      <property role="LsnsT" value="16" />
+      <property role="Lsnro" value="16" />
+    </node>
+    <node concept="1u6Luv" id="3uaVgiEKLxS" role="1u6Lvn">
+      <property role="TrG5h" value="READ_STATUS_SKIMMED" />
+      <property role="2mJlLi" value="../../icons/READ_STATUS_SKIMMED.png" />
+      <property role="LsnsT" value="16" />
+      <property role="Lsnro" value="16" />
+    </node>
+  </node>
+  <node concept="1a4JyI" id="41oFgfaFP1P">
+    <property role="2H5xwM" value="true" />
+  </node>
+  <node concept="30n1Qd" id="4M9b1ETXRuW">
+    <property role="TrG5h" value="Add or Delete MainTable Entry Tests" />
+    <ref role="30n1PB" node="6xCODJVqSLk" resolve="JabRefMainTableViewModel" />
     <node concept="3LKzX3" id="4V8pUeqNMBD" role="30n1Qb">
       <property role="TrG5h" value="Add Entry" />
       <node concept="1IbZgy" id="4V8pUeqNMBE" role="DUd2K">
@@ -936,124 +1069,6 @@
         </node>
       </node>
     </node>
-  </node>
-  <node concept="1u6Luu" id="1_y16CGAXmO">
-    <property role="TrG5h" value="JabRefImages" />
-    <node concept="28FJ0O" id="7LHyCtd50jW" role="28FJ0w">
-      <property role="TrG5h" value="Priority" />
-      <node concept="3eDL7N" id="7LHyCtd50jX" role="28FJ0D">
-        <ref role="3eDL7M" node="3uaVgiEKLxJ" resolve="PRIORITY_LOW" />
-      </node>
-      <node concept="3eDL7N" id="7LHyCtd50jY" role="28FJ0D">
-        <ref role="3eDL7M" node="3uaVgiEKLxI" resolve="PRIORITY_MEDIUM" />
-      </node>
-      <node concept="3eDL7N" id="7LHyCtd50jZ" role="28FJ0D">
-        <ref role="3eDL7M" node="3uaVgiEKLxG" resolve="PRIORITY_HIGH" />
-      </node>
-    </node>
-    <node concept="28FJ0O" id="7LHyCtd50k3" role="28FJ0w">
-      <property role="TrG5h" value="Rank" />
-      <node concept="3eDL7N" id="7LHyCtd50k4" role="28FJ0D">
-        <ref role="3eDL7M" node="3uaVgiEKLxK" resolve="RANK1" />
-      </node>
-      <node concept="3eDL7N" id="7LHyCtd50k5" role="28FJ0D">
-        <ref role="3eDL7M" node="3uaVgiEKLxL" resolve="RANK2" />
-      </node>
-      <node concept="3eDL7N" id="7LHyCtd50k6" role="28FJ0D">
-        <ref role="3eDL7M" node="3uaVgiEKLxM" resolve="RANK3" />
-      </node>
-      <node concept="3eDL7N" id="7LHyCtd50k7" role="28FJ0D">
-        <ref role="3eDL7M" node="3uaVgiEKLxN" resolve="RANK4" />
-      </node>
-      <node concept="3eDL7N" id="7LHyCtd50k8" role="28FJ0D">
-        <ref role="3eDL7M" node="3uaVgiEKLxO" resolve="RANK5" />
-      </node>
-    </node>
-    <node concept="28FJ0O" id="7LHyCtd50ka" role="28FJ0w">
-      <property role="TrG5h" value="ReadStatus" />
-      <node concept="3eDL7N" id="7LHyCtd50kb" role="28FJ0D">
-        <ref role="3eDL7M" node="3uaVgiEKLxR" resolve="READ_STATUS_READ" />
-      </node>
-      <node concept="3eDL7N" id="7LHyCtd50kc" role="28FJ0D">
-        <ref role="3eDL7M" node="3uaVgiEKLxS" resolve="READ_STATUS_SKIMMED" />
-      </node>
-    </node>
-    <node concept="1u6Luv" id="1_y16CGAXmP" role="1u6Lvn">
-      <property role="TrG5h" value="PRIORITY" />
-      <property role="2mJlLi" value="../../icons/PRIORITY.png" />
-      <property role="Lsnro" value="16" />
-      <property role="LsnsT" value="16" />
-    </node>
-    <node concept="1u6Luv" id="3uaVgiEKLxG" role="1u6Lvn">
-      <property role="TrG5h" value="PRIORITY_HIGH" />
-      <property role="2mJlLi" value="../../icons/PRIORITY_HIGH.png" />
-      <property role="Lsnro" value="16" />
-      <property role="LsnsT" value="16" />
-    </node>
-    <node concept="1u6Luv" id="3uaVgiEKLxI" role="1u6Lvn">
-      <property role="TrG5h" value="PRIORITY_MEDIUM" />
-      <property role="2mJlLi" value="../../icons/PRIORITY_MEDIUM.png" />
-      <property role="Lsnro" value="16" />
-      <property role="LsnsT" value="16" />
-    </node>
-    <node concept="1u6Luv" id="3uaVgiEKLxJ" role="1u6Lvn">
-      <property role="TrG5h" value="PRIORITY_LOW" />
-      <property role="2mJlLi" value="../../icons/PRIORITY_LOW.png" />
-      <property role="Lsnro" value="16" />
-      <property role="LsnsT" value="16" />
-    </node>
-    <node concept="1u6Luv" id="3uaVgiEKLxK" role="1u6Lvn">
-      <property role="TrG5h" value="RANK1" />
-      <property role="2mJlLi" value="../../icons/RANK1.png" />
-      <property role="LsnsT" value="16" />
-    </node>
-    <node concept="1u6Luv" id="3uaVgiEKLxL" role="1u6Lvn">
-      <property role="TrG5h" value="RANK2" />
-      <property role="2mJlLi" value="../../icons/RANK2.png" />
-      <property role="LsnsT" value="16" />
-    </node>
-    <node concept="1u6Luv" id="3uaVgiEKLxM" role="1u6Lvn">
-      <property role="TrG5h" value="RANK3" />
-      <property role="2mJlLi" value="../../icons/RANK3.png" />
-      <property role="LsnsT" value="16" />
-    </node>
-    <node concept="1u6Luv" id="3uaVgiEKLxN" role="1u6Lvn">
-      <property role="TrG5h" value="RANK4" />
-      <property role="2mJlLi" value="../../icons/RANK4.png" />
-      <property role="LsnsT" value="16" />
-    </node>
-    <node concept="1u6Luv" id="3uaVgiEKLxO" role="1u6Lvn">
-      <property role="TrG5h" value="RANK5" />
-      <property role="2mJlLi" value="../../icons/RANK5.png" />
-      <property role="LsnsT" value="16" />
-    </node>
-    <node concept="1u6Luv" id="3uaVgiEKLxP" role="1u6Lvn">
-      <property role="TrG5h" value="RANKING" />
-      <property role="2mJlLi" value="../../icons/RANKING.png" />
-      <property role="Lsnro" value="16" />
-      <property role="LsnsT" value="16" />
-    </node>
-    <node concept="1u6Luv" id="3uaVgiEKLxQ" role="1u6Lvn">
-      <property role="TrG5h" value="READ_STATUS" />
-      <property role="2mJlLi" value="../../icons/READ_STATUS.png" />
-      <property role="LsnsT" value="16" />
-      <property role="Lsnro" value="16" />
-    </node>
-    <node concept="1u6Luv" id="3uaVgiEKLxR" role="1u6Lvn">
-      <property role="TrG5h" value="READ_STATUS_READ" />
-      <property role="2mJlLi" value="../../icons/READ_STATUS_READ.png" />
-      <property role="LsnsT" value="16" />
-      <property role="Lsnro" value="16" />
-    </node>
-    <node concept="1u6Luv" id="3uaVgiEKLxS" role="1u6Lvn">
-      <property role="TrG5h" value="READ_STATUS_SKIMMED" />
-      <property role="2mJlLi" value="../../icons/READ_STATUS_SKIMMED.png" />
-      <property role="LsnsT" value="16" />
-      <property role="Lsnro" value="16" />
-    </node>
-  </node>
-  <node concept="1a4JyI" id="41oFgfaFP1P">
-    <property role="2H5xwM" value="true" />
   </node>
 </model>
 
