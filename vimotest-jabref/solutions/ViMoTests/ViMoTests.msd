@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<solution name="ViMoTests" uuid="9faad747-34ea-4417-8f1b-1fa8d6ceca4c" moduleVersion="0">
+<solution name="ViMoTests" uuid="9faad747-34ea-4417-8f1b-1fa8d6ceca4c" moduleVersion="1">
   <models>
     <modelRoot contentPath="${module}" type="default">
       <sourceRoot path="${module}/models" />
