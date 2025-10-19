@@ -19,6 +19,14 @@ public class Add_or_Delete_MainTable_Entry_Tests_Test {
     this.when_click_AddEntry();
     this.then_Entries_has_2_rows();
   }
+  @Test
+  public void test_Delete_Entry_given_articleFile_when_LoadView_and_click_DeleteEntry_then_Entries_has_0_rows() throws Exception {
+    this.given_articleFile_1();
+    this.BuildSut();
+    this.when_LoadView();
+    this.when_click_DeleteEntry();
+    this.then_Entries_has_0_rows();
+  }
   @BeforeEach
   public void setUp() {
     this.testSetup = new JabRefMainTableViewModelTestSetupImpl();
@@ -36,6 +44,9 @@ public class Add_or_Delete_MainTable_Entry_Tests_Test {
   public void given_articleFile() {
     this.testSetup.SetBibFileTestContext(this.articleFile);
   }
+  public void given_articleFile_1() {
+    this.testSetup.SetBibFileTestContext(this.articleFile);
+  }
 
 
   public void when_LoadView() {
@@ -43,6 +54,9 @@ public class Add_or_Delete_MainTable_Entry_Tests_Test {
   }
   public void when_click_AddEntry() {
     this.sut.addEntryClicked();
+  }
+  public void when_click_DeleteEntry() {
+    this.sut.deleteEntryClicked();
   }
 
 
@@ -69,5 +83,9 @@ public class Add_or_Delete_MainTable_Entry_Tests_Test {
     Assertions.assertEquals("", row1.getReadStatusImageName());
     Assertions.assertEquals("", row1.getPriorityImageName());
     // }
+  }
+  public void then_Entries_has_0_rows() {
+    List<JabRefMainTableViewModelEntriesRow> actualRows = this.sut.getEntriesTableRows();
+    Assertions.assertEquals(Integer.valueOf(0), Integer.valueOf(actualRows.size()));
   }
 }

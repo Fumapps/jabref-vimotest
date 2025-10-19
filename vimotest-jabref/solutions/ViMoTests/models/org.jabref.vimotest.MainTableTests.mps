@@ -1069,6 +1069,56 @@
         </node>
       </node>
     </node>
+    <node concept="3LKzX3" id="5VMFTPUvr5R" role="30n1Qb">
+      <property role="TrG5h" value="Delete Entry" />
+      <node concept="1IbZgy" id="5VMFTPUvr5S" role="DUd2K">
+        <node concept="8w7HN" id="5VMFTPUvr5Z" role="DUiTU">
+          <ref role="8w7Kh" node="6xCODJVrQo0" resolve="articleFile" />
+        </node>
+      </node>
+      <node concept="1s$VFG" id="5VMFTPUvr5U" role="1s$QAY">
+        <node concept="DUd5q" id="5VMFTPUvr5V" role="1s$QAM">
+          <node concept="27s6xY" id="5VMFTPUvr61" role="DUiS9">
+            <ref role="27sXQn" node="6xCODJVqSLm" resolve="LoadView" />
+          </node>
+        </node>
+        <node concept="DUd5q" id="5VMFTPUvr63" role="1s$QAM">
+          <node concept="3eaLt3" id="5VMFTPUvr65" role="DUiS9">
+            <ref role="3ucQsQ" node="4M9b1ETXRuQ" resolve="DeleteEntry" />
+          </node>
+        </node>
+        <node concept="DUd2R" id="5VMFTPUvr5X" role="1s$QAX">
+          <node concept="30nzp_" id="5VMFTPUvr66" role="DUiSb">
+            <ref role="30nzpS" node="4Ew27B42Xgq" resolve="Entries" />
+            <node concept="3UVeCy" id="5VMFTPUvr67" role="30nDbQ">
+              <node concept="2ayrQO" id="5VMFTPUvr68" role="3UVeCz">
+                <node concept="1EpGR1" id="5VMFTPUvr69" role="1EpG3j">
+                  <ref role="1EpG3m" node="4Ew27B42Xgr" resolve="columnCell" />
+                </node>
+                <node concept="1EpGR1" id="5VMFTPUvr6a" role="1EpG3j">
+                  <ref role="1EpG3m" node="1_y16CGAXlk" resolve="Author" />
+                </node>
+                <node concept="1EpGR1" id="5VMFTPUvr6b" role="1EpG3j">
+                  <ref role="1EpG3m" node="1_y16CGAXlq" resolve="Title" />
+                </node>
+                <node concept="1EpGR1" id="5VMFTPUvr6c" role="1EpG3j">
+                  <ref role="1EpG3m" node="1_y16CGAXm0" resolve="Year" />
+                </node>
+                <node concept="1EpGR1" id="5VMFTPUvr6d" role="1EpG3j">
+                  <ref role="1EpG3m" node="1_y16CGAXmd" resolve="Rank" />
+                </node>
+                <node concept="1EpGR1" id="5VMFTPUvr6e" role="1EpG3j">
+                  <ref role="1EpG3m" node="1_y16CGAXmq" resolve="ReadStatus" />
+                </node>
+                <node concept="1EpGR1" id="5VMFTPUvr6f" role="1EpG3j">
+                  <ref role="1EpG3m" node="1_y16CGAXmB" resolve="Priority" />
+                </node>
+              </node>
+            </node>
+          </node>
+        </node>
+      </node>
+    </node>
   </node>
 </model>
 

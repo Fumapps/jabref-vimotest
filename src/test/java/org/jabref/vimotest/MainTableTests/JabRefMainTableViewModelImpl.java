@@ -92,4 +92,10 @@ public class JabRefMainTableViewModelImpl extends JabRefMainTableViewModel {
                 taskExecutor);
         importHandler.importCleanedEntries(Arrays.asList(new BibEntry()));
     }
+
+    @Override
+    public void deleteEntryClicked() {
+        BibEntry firstEntry = wrappedDataModel.getEntriesFilteredAndSorted().get(0).getEntry();
+        context.getDatabase().removeEntry(firstEntry);
+    }
 }
